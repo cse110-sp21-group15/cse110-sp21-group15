@@ -43,8 +43,9 @@ Second-year CS major in Sixth, and I like to bake!
 Github Site: https://ejewik.github.io/user-page/
 
 **Tejasvin Mukesh**
+Second-year CS major in ERC, In my free time I love to binge-watch Netflix.
 
-Github Site:
+Github Site: https://tmukesh2809.github.io/LAB1UserPage/
 
 **Vivian Yan**
 Second-year CS major in Marshall, and I love visiting plant nurseries!
