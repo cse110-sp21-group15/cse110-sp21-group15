@@ -9,6 +9,8 @@ Third-year Computer Science major in Warren, and I enjoy working on AI research 
 
 Github Site: https://jonzamora.dev/CSE110-Lab1/
 
+![jonathan zamora](photos/jonathan-zamora.JPG)
+
 **Rahul Dadlani**
 Third-year Math-CS major in Sixth and I enjoy videography
 
@@ -25,7 +27,7 @@ Third-year CE major, d&d nerd
 Github Site:
 
 **Zain Khan**
-Zain Khan: Second year Math-CS major in ERC, and I love to play basketball 
+Second year Math-CS major in ERC, and I love to play basketball 
 
 Github Site: https://zainnk902.github.io/zainkhan/
 
