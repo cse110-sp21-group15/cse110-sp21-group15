@@ -28,6 +28,7 @@ Github Site:
 
 **Zain Khan**
 Second year Math-CS major in ERC, and I love to play basketball 
+![Zain Khan](photos/Zain_Khan.JPG)
 
 Github Site: https://zainnk902.github.io/zainkhan/
 
