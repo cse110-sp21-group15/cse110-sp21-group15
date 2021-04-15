@@ -1,5 +1,7 @@
 # Orbis 🌎📓 (Group 15)
 
+![orbis logo](branding/orbis-logo.svg)
+
 ## What we're doing
 Building an elegant, compact **Bullet Journal** application for CSE 110 in Spring 2021
 
