@@ -1,19 +1,28 @@
-Add shell script to automate making new copy
+## Day: XX/XX/XX - Meeting #X
 
 ## Team number / team name
-- 15 / Undecided
+- Group 15 - Orbis
 ## Type of meeting held
-Turn into HTML
 Brainstorming, Engineering, Design, Other
 (if other explain)
 ## Which members were present / absent
-Turn into HTML
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
+- [x] Jonathan Zamora
+
+- [x] Rahul Dadlani
+
+- [x] Joshua Wang
+
+- [x] Dylan Cullen
+
+- [x] Zain Khan
+
+- [ ] Martin Cheung
+
+- [x] Emily Jewik
+
+- [x] Tejasvin Mukesh
+
+- [x] Vivian Yan
 ## When & Where the meeting was held
 - When: X PM - Y PM
 - Where: Zoom

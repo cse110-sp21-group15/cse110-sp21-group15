@@ -1,3 +1,5 @@
+## Day: 04/12/21 - Kickoff (Meeting #1)
+
 ## Team number / team name
 - Group 15 - Orbis 
 ## Type of meeting held
