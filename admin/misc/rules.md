@@ -36,14 +36,7 @@
 - Take **responsibility** for your own actions and mistakes
 - Be **empathetic** to other team members when collaborating and communicating
 
-
-**5) Specific Team Member Responsibilities/Deadlines (Optional)**
-
-*This section may be used to record specific tasks or responsibilities particular team members have assumed.*
-
-- 
-
-**6) Conflict Resolution**
+**5) Conflict Resolution**
 
 *Team members should clearly articulate any conflicts they may have and be understanding toward all parties involved.*
 
@@ -54,10 +47,10 @@ Begin at step 1, if it doesn't work then go to the next step, so on and so forth
 3) Bring in a third party to settle the matter (preferably someone that's objective in the matter)
 4) Discuss with TA Sasya
 
-**7) Expectations of Faculty and GTA’s**
+**6) Expectations of Faculty and GTA’s**
 
 - If a team member fails to meet the guidelines that have been outlined in this agreement, the member and their situation will be reported to the CSE 110 course staff, but the team will still be responsible for submitting a completed assignment. The CSE 110 course staff will be available to meet with teams to resolve issues.
 
-**8) Team Signatures**
+**7) Team Signatures**
 
-Include signature for each student:
+Include signature for each student: 
