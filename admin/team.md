@@ -1,15 +1,13 @@
-# Team Name (Group 15)
+# Orbis 🌎📓 (Group 15)
 
 ## What we're doing
-Building a **Bullet Journal** for CSE 110 Spring 2021
+Building an elegant, compact **Bullet Journal** application for CSE 110 in Spring 2021
 
 ## Who we are
 **Jonathan Zamora**
 Third-year Computer Science major in Warren, and I enjoy working on AI research projects.
 
 Github Site: https://jonzamora.dev/CSE110-Lab1/
-
-![jonathan zamora](photos/jonathan-zamora.JPG)
 
 **Rahul Dadlani**
 Third-year Math-CS major in Sixth and I enjoy videography
