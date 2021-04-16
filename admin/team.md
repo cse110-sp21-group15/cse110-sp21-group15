@@ -11,6 +11,7 @@ Third-year Computer Science major in Warren, and I enjoy working on AI research 
 
 Github Site: https://jonzamora.dev/CSE110-Lab1/
 
+<img align="left" src="photos/rahul.png">
 **Rahul Dadlani**
 Third-year Math-CS major in Sixth and I enjoy videography
 
