@@ -24,7 +24,7 @@ Github Site: https://joshu-wa.github.io/
 **Dylan Cullen**
 Third-year CE major, d&d nerd
 
-Github Site:
+Github Site: https://dcullenucsd.github.io/cse110lab1/
 
 **Zain Khan**
 Second year Math-CS major in ERC, and I love to play basketball 
