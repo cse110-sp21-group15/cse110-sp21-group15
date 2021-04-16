@@ -14,9 +14,9 @@ Brainstorming, Engineering, Design, Other
 
 - [x] Dylan Cullen
 
-- [x] Zain Khan
+- [ ] Zain Khan
 
-- [x] Martin Cheung
+- [ ] Martin Cheung
 
 - [x] Emily Jewik
 
@@ -24,17 +24,19 @@ Brainstorming, Engineering, Design, Other
 
 - [x] Vivian Yan
 ## When & Where the meeting was held
-- When: X PM - Y PM
+- When: 7 PM - 8 PM
 - Where: Zoom
 ## The agenda of what is discussed
-- 
+- Finalized and signed group contract
+- Made team logo
+- Designed team branded google slides
 ## Any old unresolved business from the previous meeting
-- 
+- Came up with a team name
 ## Any new business to be discussed
-- 
+- Made a plan to film the team video asynchronously
 ## Anything that was on the agenda but was not discussed (save for next meeting's old business)
-- 
-## Any decisions made & their reasoning (if there were dissenting opinions include them, then write why the group decided to make that decision anyways)
-- 
+- Everything that was slated to be discusses was discussed
+# Any decisions made & their reasoning (if there were dissenting opinions include them, then write why the group decided to make that decision anyways)
+- Rahul will edit and upload the video
 ## When the meeting finished
-- Y PM
+- 8:45 PM
