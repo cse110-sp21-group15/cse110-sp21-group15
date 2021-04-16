@@ -1,10 +1,9 @@
-## Day: XX/XX/XX - Meeting #X
+## Day: 4/14/21 - Meeting #3
 
 ## Team number / team name
 - Group 15 - Orbis
 ## Type of meeting held
-Brainstorming, Engineering, Design, Other
-(if other explain)
+- Brainstorming and Collaborative Work
 ## Which members were present / absent
 - [x] Jonathan Zamora
 
@@ -28,8 +27,10 @@ Brainstorming, Engineering, Design, Other
 - Where: Zoom
 ## The agenda of what is discussed
 - Finalized and signed group contract
-- Made team logo
+- Designed team logo
 - Designed team branded google slides
+- Delegated tasks for signing individual contracts
+- Also delegated tasks for creating individual 15-second videos
 ## Any old unresolved business from the previous meeting
 - Came up with a team name
 ## Any new business to be discussed
