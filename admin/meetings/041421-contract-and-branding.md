@@ -33,11 +33,13 @@
 - Also delegated tasks for creating individual 15-second videos
 ## Any old unresolved business from the previous meeting
 - Came up with a team name
+- Created a team logo
+- Figured out how we would tackle the team rules and team video
 ## Any new business to be discussed
 - Made a plan to film the team video asynchronously
 ## Anything that was on the agenda but was not discussed (save for next meeting's old business)
-- Everything that was slated to be discusses was discussed
+- Everything that was slated to be discussed during our meeting was addressed
 # Any decisions made & their reasoning (if there were dissenting opinions include them, then write why the group decided to make that decision anyways)
-- Rahul will edit and upload the video
+- Rahul will edit and upload the team video prior to the assignment deadline
 ## When the meeting finished
 - 8:45 PM
