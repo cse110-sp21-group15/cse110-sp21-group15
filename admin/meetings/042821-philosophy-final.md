@@ -1,10 +1,9 @@
-## Day: XX/XX/XX - Meeting #X
+## Day: 4/28/21 - Meeting #5
 
 ## Team number / team name
 - Group 15 - Orbis
 ## Type of meeting held
-Brainstorming, Engineering, Design, Other
-(if other explain)
+Brainstorming
 ## Which members were present / absent
 - [x] Jonathan Zamora
 
