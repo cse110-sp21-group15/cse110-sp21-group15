@@ -25,7 +25,7 @@ else
 
   else
 
-    cp template.md "${CURRENT_DATE}-${MEETING_TOPIC}"
+    cp template.md "${CURRENT_DATE}-${MEETING_TOPIC}.md"
 
   fi
 
