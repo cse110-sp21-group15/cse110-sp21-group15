@@ -1,0 +1,23 @@
+{
+  "name": "cse110-sp21-group15",
+  "version": "1.0.0",
+  "description": "A bullet journal made in CSE 110 at UCSD. 📓   Meet our [team](./admin/team.md)!",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cse110-sp21-group15/cse110-sp21-group15.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cse110-sp21-group15/cse110-sp21-group15/issues"
+  },
+  "homepage": "https://github.com/cse110-sp21-group15/cse110-sp21-group15#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
