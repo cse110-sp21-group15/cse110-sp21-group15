@@ -7,4 +7,4 @@
     "rules": {
       "quotes": ["warn", "double"] // example of a rule 
     }
-  }
+}
