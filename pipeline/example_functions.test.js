@@ -20,8 +20,8 @@ test('Account is Zain\'s account', () => {
     });
 });
 //example test that will fail
-/*
+
 test('20 divided by 2 equals 10', () => {
     expect(functions.divide_Will_Fail(20, 2)).toBe(10);
 });
-*/
+
