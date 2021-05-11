@@ -1,72 +1,42 @@
-# [short title of solved problem and solution]
+# Determined Linting and Code Style Tools
 
-* Status: [proposed | rejected | accepted | deprecated | … | superseded by [ADR-0005](0005-example.md)] <!-- optional -->
-* Deciders: [list everyone involved in the decision] <!-- optional -->
-* Date: [YYYY-MM-DD when the decision was last updated] <!-- optional -->
+* Status: accepted
+* Deciders: [Emily Jewik, Zain Khan]
+* Date: 2021-05-09 
 
-Technical Story: [description | ticket/issue URL] <!-- optional -->
 
 ## Context and Problem Statement
+What tools should we use for linting and enforcing code style guidelines?
 
-[Describe the context and problem statement, e.g., in free form using two to three sentences. You may want to articulate the problem in form of a question.]
+## Decision Drivers
 
-## Decision Drivers <!-- optional -->
-
-* [driver 1, e.g., a force, facing concern, …]
-* [driver 2, e.g., a force, facing concern, …]
-* … <!-- numbers of drivers can vary -->
+* Compatible with JavaScript
+* Customizable
 
 ## Considered Options
 
-* [option 1]
-* [option 2]
-* [option 3]
-* … <!-- numbers of options can vary -->
+* ESLint and CodeClimate
+* Codacity
 
 ## Decision Outcome
 
-Chosen option: "[option 1]", because [justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force force | … | comes out best (see below)].
+Chosen option: "ESLint and CodeClimate", because both tools fit decision drivers
+and integrate with each other
 
-### Positive Consequences <!-- optional -->
+### Positive Consequences
 
-* [e.g., improvement of quality attribute satisfaction, follow-up decisions required, …]
-* …
+* Improves quality of code
 
-### Negative Consequences <!-- optional -->
+## Pros and Cons of the Options
 
-* [e.g., compromising quality attribute, follow-up decisions required, …]
-* …
+### ESLint and CodeClimate
 
-## Pros and Cons of the Options <!-- optional -->
 
-### [option 1]
+* Good, because CodeClimate auto syncs with GitHub
+* Good, because it comes with default settings
+* Bad, because somewhat difficult to setup
 
-[example | description | pointer to more information | …] <!-- optional -->
+### Codacity
 
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
-* … <!-- numbers of pros and cons can vary -->
-
-### [option 2]
-
-[example | description | pointer to more information | …] <!-- optional -->
-
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
-* … <!-- numbers of pros and cons can vary -->
-
-### [option 3]
-
-[example | description | pointer to more information | …] <!-- optional -->
-
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
-* … <!-- numbers of pros and cons can vary -->
-
-## Links <!-- optional -->
-
-* [Link type] [Link to ADR] <!-- example: Refined by [ADR-0005](0005-example.md) -->
-* … <!-- numbers of links can vary -->
+* Good, because easy to setup
+* Bad, because no auto sync with GitHub
