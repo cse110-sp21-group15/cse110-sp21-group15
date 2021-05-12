@@ -1,0 +1,48 @@
+#!/bin/bash
+#
+# A hook script to verify that the code committed passes the ESLint
+# checks. Called by "git commit" with no arguments. 
+# Called by "git commit" with no arguments.  The hook runs eslint on
+# all staged files and exits with code 0 if there are no issues and
+# if there are issues prompts if you would like to commit anyway.
+
+STAGED_FILES=$(git diff --staged --name-only --diff-filter=ACM | grep ".jsx\{0,1\}$")
+PASS=true
+
+if [[ "$STAGED_FILES" = "" ]]; then
+	exit 0
+fi
+
+echo -e "\nValidating ESLint...\n"
+
+for FILE in $STAGED_FILES
+do
+	eslint "$FILE"
+
+	if [[ "$?" == 0 ]]; then
+		echo -e "\t\033[32mESLint Passed: $FILE\033[0m"
+	else
+		echo -e "\t\033[41mESLint Failed: $FILE\033[0m"
+		PASS=false
+	fi
+done
+
+echo -e "\nJavascript validation completed.\n"
+
+if [[ $PASS = false ]]; then
+	echo -e "\033[41mCOMMIT FAILED:\033[0m Your commit contains files that should pass ESLint but do not.\n"
+else
+  echo -e "\033[42mCOMMIT SUCCEEDED\033[0m\n"
+fi	
+
+if [[ $PASS = false ]]; then
+	echo -e "\nWould you like to commit anyway? Enter 'Y' to commit anyway and enter anything else to abort the commit.\n"
+	read answer </dev/tty
+	if [[ "$answer" = "Y" ]]; then
+		exit 0;
+	else
+		exit 1;
+	fi
+else
+	exit 0
+fi
