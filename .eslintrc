@@ -4,7 +4,6 @@
     },
     "parser": "babel-eslint",        // workaround for default parser working incorrectly
     "extends": "eslint:recommended", // recommended rules for eslint
-    //"ignorePatterns": ["pipeline/example_functions.test.js", "README.md"],
     "rules": {
       // "quotes": ["warn", "double"] - example of a rule
     }
