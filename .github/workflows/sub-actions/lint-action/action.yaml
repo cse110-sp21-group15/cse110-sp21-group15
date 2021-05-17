@@ -1,12 +1,15 @@
 name: lint-action
-                                                                                   
+inputs:
+  branch:
+    description: 'Branch to run this action on'
+    required: true
 on:
   push:
     branches:
-      - ${{env.INPUT_BRANCH}}
+      - ${{INPUT_BRANCH}}
   pull_request:
     branches:
-      - ${{env.INPUT_BRANCH}}
+      - ${{INPUT_BRANCH}}
 
 jobs:
   eslint:
