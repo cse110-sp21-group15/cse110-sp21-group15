@@ -6,10 +6,10 @@ inputs:
 on:
   push:
     branches:
-      - ${{INPUT_BRANCH}}
+      - ${{env.INPUT_BRANCH}}
   pull_request:
     branches:
-      - ${{INPUT_BRANCH}}
+      - ${{env.INPUT_BRANCH}}
 
 jobs:
   eslint:
