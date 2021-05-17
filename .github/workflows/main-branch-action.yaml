@@ -25,7 +25,7 @@ jobs:
           with:
             ref: pipeline-phase-1.1
         - name: Run linter on new code
-          uses: ./.github/workflows/sub-actions/
+          uses: ./.github/workflows/sub-actions/lint-action
           with: 
             branch: pipeline-phase-1.1
 
@@ -38,7 +38,7 @@ jobs:
           with:
             ref: pipeline-phase-1.1
         - name: Run full suite of tests on new code
-          uses: ./.github/workflows/sub-actions/all-tests-action.yaml
+          uses: ./.github/workflows/sub-actions/all-tests-action
           with: 
             branch: pipeline-phase-1.1
 
