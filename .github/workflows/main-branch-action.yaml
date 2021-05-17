@@ -10,6 +10,8 @@ jobs:
 #      runs-on: ubuntu-latest
 #      steps:
 #        - uses: actions/checkout@v2
+#          with:
+#            branch: pipeline-phase-1.1
 #        - name: Run formatter on new code
 #          uses: ./.github/workflows/sub-actions/format-action.yaml
 #          with: 
@@ -21,6 +23,8 @@ jobs:
 #      needs: format
       steps:
         - uses: actions/checkout@v2
+          with:
+            branch: pipeline-phase-1.1
         - name: Run linter on new code
           uses: ./.github/workflows/sub-actions/lint-action.yaml
           with: 
@@ -32,6 +36,8 @@ jobs:
 #      needs: [lint, format]
       steps:
         - uses: actions/checkout@v2
+          with:
+            branch: pipeline-phase-1.1
         - name: Run full suite of tests on new code
           uses: ./.github/workflows/sub-actions/all-tests-action.yaml
           with: 
@@ -43,6 +49,8 @@ jobs:
 #      needs: [lint, format, test]
 #      steps:
 #        - uses: actions/checkout@v2
+#          with:
+#          branch: pipeline-phase-1.1
 #        - name: Generate docs on new code
 #          uses: ./.github/workflows/sub-actions/generate-docs-action.yaml
 #          with: 
