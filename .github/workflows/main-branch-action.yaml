@@ -12,6 +12,8 @@ jobs:
 #        - uses: actions/checkout@v2
 #        - name: Run formatter on new code
 #        - uses: ./.github/actions/sub-actions/format-action
+#          with: 
+#            branch: pipeline-phase-1.1
 
     lint:
       name: lint-job
@@ -21,6 +23,8 @@ jobs:
         - uses: actions/checkout@v2
         - name: Run linter on new code
         - uses: ./.github/actions/sub-actions/lint-action
+          with: 
+            branch: pipeline-phase-1.1
 
     test:
       name: test-job
@@ -30,6 +34,8 @@ jobs:
         - uses: actions/checkout@v2
         - name: Run full suite of tests on new code
         - uses: ./.github/actions/sub-actions/all-tests-action
+          with: 
+            branch: pipeline-phase-1.1
 
 #    generate-docs:
 #      name: generate-docs-job
@@ -39,3 +45,5 @@ jobs:
 #        - uses: actions/checkout@v2
 #        - name: Generate docs on new code
 #        - uses: ./.github/actions/sub-actions/generate-docs-action
+#          with: 
+#            branch: pipeline-phase-1.1
