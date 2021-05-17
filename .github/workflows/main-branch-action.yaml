@@ -1,0 +1,41 @@
+name: Main Branch Action
+
+on: [push, pull_request]
+
+jobs:
+
+
+#    format:
+#      name: format-job
+#      runs-on: ubuntu-latest
+#      steps:
+#        - uses: actions/checkout@v2
+#        - name: Run formatter on new code
+#        - uses: ./.github/actions/sub-actions/format-action
+
+    lint:
+      name: lint-job
+      runs-on: ubuntu-latest
+#      needs: format
+      steps:
+        - uses: actions/checkout@v2
+        - name: Run linter on new code
+        - uses: ./.github/actions/sub-actions/lint-action
+
+    test:
+      name: test-job
+      runs-on: ubuntu-latest
+#      needs: [lint, format]
+      steps:
+        - uses: actions/checkout@v2
+        - name: Run full suite of tests on new code
+        - uses: ./.github/actions/sub-actions/all-tests-action
+
+#    generate-docs:
+#      name: generate-docs-job
+#      runs-on: ubuntu-latest
+#      needs: [lint, format, test]
+#      steps:
+#        - uses: actions/checkout@v2
+#        - name: Generate docs on new code
+#        - uses: ./.github/actions/sub-actions/generate-docs-action

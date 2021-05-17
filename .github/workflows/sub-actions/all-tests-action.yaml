@@ -1,0 +1,18 @@
+name: test-action
+on: 
+  push:
+    branches:
+      - ${{INPUT_BRANCH}}
+  pull_request:
+    branches:
+      - ${{INPUT_BRANCH}}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install modules
+      run: yarn
+    - name: Run tests
+      run: yarn test
