@@ -2,7 +2,5 @@ name: lint-action
 runs:
   using: "composite"
   steps:
-    - name: Checkout repo
-      uses: actions/checkout@v2
     - name: Run lint action from stefanoeb
       uses: stefanoeb/eslint-action@1.0.2
