@@ -4,15 +4,11 @@ on: [push, pull_request]
 
 jobs:
 
+# TODO: Make format job. Might, be configurable with eslint + prettier so this
+# job could be added into ./actions/lint-action/action.yaml
 
-#    format: #      name: format-job
-#      runs-on: ubuntu-latest
-#      steps:
-#        - uses: actions/checkout@v2
-#          with:
-#            ref: pipeline-phase-1.1
-#        - name: Run formatter on new code
-#          uses: ./.github/workflows/sub-actions/format-action.yaml
+
+# TODO: Make jobs dependent
 
     lint:
       name: lint-job
@@ -23,7 +19,7 @@ jobs:
           with:
             ref: pipeline-phase-1.1
         - name: Run linter on new code
-          uses: ./.github/workflows/sub-actions/lint-action
+          uses: ./.github/workflows/actions/lint-action
 
     test:
       name: test-job
@@ -34,15 +30,4 @@ jobs:
           with:
             ref: pipeline-phase-1.1
         - name: Run full suite of tests on new code
-          uses: ./.github/workflows/sub-actions/all-tests-action
-
-#    generate-docs:
-#      name: generate-docs-job
-#      runs-on: ubuntu-latest
-#      needs: [lint, format, test]
-#      steps:
-#        - uses: actions/checkout@v2
-#          with:
-#            ref: pipeline-phase-1.1
-#        - name: Generate docs on new code
-#          uses: ./.github/workflows/sub-actions/generate-docs-action.yaml
+          uses: ./.github/workflows/actions/all-tests-action
