@@ -42,8 +42,7 @@ Automated code quality is currently configured with CodeClimate. Currently, we'r
 We are using Jest for all testing in our project
 Testing is implemented using GitHub Actions as well, so upon pushing to the main branch, all unit testing will be ran, and you can only successfully push to main if all unit tests are passed successfully. Unit tests can also be made and tested before pushing for any tests needed.
 ## Automatic Doc Generation
-
-
-
+We are using JSDocs for our automatic doc generation.
+Using github actions, a command will be run for JSDocs that will generate an html page that automatically documents our code. All it requires is a little work from developers to add JSDoc compatible method descriptions in comments above each method.
 
 
