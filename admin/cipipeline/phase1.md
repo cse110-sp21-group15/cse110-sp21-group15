@@ -1,3 +1,4 @@
+![ORBIS Brainstorming MindMap (2)](https://user-images.githubusercontent.com/68146410/118580556-f1f5a980-b744-11eb-956b-0e4a29a086a6.jpg)
 # Pipeline Phase 1 Status
 
  ## Linting
@@ -46,5 +47,6 @@ We are using JSDocs for our automatic doc generation.
 Using github actions, a command will be run for JSDocs that will generate an html page that automatically documents our code. All it requires is a little work from developers to add JSDoc compatible method descriptions in comments above each method.
 
 ## CI/CD Pipeline
-![ORBIS Brainstorming MindMap (1)](https://user-images.githubusercontent.com/68146410/118579196-709d1780-b742-11eb-9aa1-baa537a3920d.jpg)
+![ORBIS Brainstorming MindMap (2)](https://user-images.githubusercontent.com/68146410/118580585-fcb03e80-b744-11eb-9086-ea5297e04562.jpg)
+
 
