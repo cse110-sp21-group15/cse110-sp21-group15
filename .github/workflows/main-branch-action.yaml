@@ -23,8 +23,7 @@ jobs:
           with:
             ref: pipeline-phase-1.1
         - name: Run linter on new code
-          uses: stefanoeb/eslint-action@1.0.2
-#          uses: ./.github/workflows/sub-actions/lint-action
+          uses: ./.github/workflows/sub-actions/lint-action
 
     test:
       name: test-job

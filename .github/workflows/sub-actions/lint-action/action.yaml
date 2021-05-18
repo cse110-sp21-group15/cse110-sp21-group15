@@ -2,5 +2,9 @@ name: lint-action
 runs:
   using: "composite"
   steps:
-    - name: Run lint action from stefanoeb
-      uses: stefanoeb/eslint-action@1.0.2
+    - name: Install modules
+      run: yarn
+      shell: bash 
+    - name: Run ESLint
+      run: eslint . --ext .js,.jsx,.ts,.tsx
+      shell: bash 
