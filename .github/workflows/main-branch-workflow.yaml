@@ -4,11 +4,7 @@ on: [push, pull_request]
 
 jobs:
 
-# TODO: Make format job. Might, be configurable with eslint + prettier so this
-# job could be added into ./actions/lint-action/action.yaml
-
-
-# TODO: Make jobs dependent
+# TODO: Make jobs dependent on each other
 
     lint:
       name: lint-job
@@ -31,3 +27,4 @@ jobs:
             ref: pipeline-phase-1.1
         - name: Run full suite of tests on new code
           uses: ./.github/workflows/actions/all-tests-action
+
