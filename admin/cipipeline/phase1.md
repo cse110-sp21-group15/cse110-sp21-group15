@@ -39,7 +39,8 @@ TBD
 Automated code quality is currently configured with CodeClimate. Currently, we're trying to see if we can change our repo to private and still keep CodeClimate, as CodeClimate is only free for public repos. We sent an email to support and they should get back to us in a day.
 
 ## Testing
-
+We are using Jest for all testing in our project
+Testing is implemented using GitHub Actions as well, so upon pushing to the main branch, all unit testing will be ran, and you can only successfully push to main if all unit tests are passed successfully. 
 ## Automatic Doc Generation
 
 
