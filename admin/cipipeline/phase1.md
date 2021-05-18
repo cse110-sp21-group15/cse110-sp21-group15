@@ -45,5 +45,5 @@ Testing is implemented using GitHub Actions as well, so upon pushing to the main
 We are using JSDocs for our automatic doc generation.
 Using github actions, a command will be run for JSDocs that will generate an html page that automatically documents our code. All it requires is a little work from developers to add JSDoc compatible method descriptions in comments above each method.
 
-![Uploading ORBIS Brainstorming MindMap.jpg…]()
+![Pipeline](/admin/photos/ORBIS Brainstorming MindMap (1).jpg)
 
