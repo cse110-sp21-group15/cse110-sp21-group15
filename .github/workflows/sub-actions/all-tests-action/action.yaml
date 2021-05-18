@@ -1,22 +1,7 @@
 name: test-action
-#inputs:
-#  branch:
-#    description: 'Branch to run this action on'
-#    required: true
-on: 
-  push:
-    branches:
-      - pipeline-phase-1.1
-      - main
-  pull_request:
-    branches:
-      - pipeline-phase-1.1
-      - main
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
+runs:
+  using: "composite"
+  steps:
     - name: Checkout repo
       uses: actions/checkout@v2
     - name: Install modules
