@@ -13,8 +13,6 @@ jobs:
 #            ref: pipeline-phase-1.1
 #        - name: Run formatter on new code
 #          uses: ./.github/workflows/sub-actions/format-action.yaml
-#          with: 
-#            branch: pipeline-phase-1.1
 
     lint:
       name: lint-job
@@ -26,8 +24,6 @@ jobs:
             ref: pipeline-phase-1.1
         - name: Run linter on new code
           uses: ./.github/workflows/sub-actions/lint-action
-          with: 
-            branch: pipeline-phase-1.1
 
     test:
       name: test-job
@@ -39,8 +35,6 @@ jobs:
             ref: pipeline-phase-1.1
         - name: Run full suite of tests on new code
           uses: ./.github/workflows/sub-actions/all-tests-action
-          with: 
-            branch: pipeline-phase-1.1
 
 #    generate-docs:
 #      name: generate-docs-job
@@ -52,5 +46,3 @@ jobs:
 #            ref: pipeline-phase-1.1
 #        - name: Generate docs on new code
 #          uses: ./.github/workflows/sub-actions/generate-docs-action.yaml
-#          with: 
-#            branch: pipeline-phase-1.1

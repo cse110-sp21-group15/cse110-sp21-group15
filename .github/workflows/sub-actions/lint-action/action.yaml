@@ -1,15 +1,17 @@
 name: lint-action
-inputs:
-  branch:
-    description: 'Branch to run this action on'
-    required: true
+#inputs:
+#  branch:
+#    description: 'Branch to run this action on'
+#    required: true
 on:
   push:
     branches:
-      - ${{env.INPUT_BRANCH}}
+      - pipeline-phase-1.1
+      - main
   pull_request:
     branches:
-      - ${{env.INPUT_BRANCH}}
+      - pipeline-phase-1.1
+      - main
 
 jobs:
   eslint:
