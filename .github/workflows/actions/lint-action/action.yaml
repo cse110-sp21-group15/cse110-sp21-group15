@@ -3,7 +3,7 @@ runs:
   using: "composite"
   steps:
     - name: Install modules
-      run: yarn
+      run: npm install
       shell: bash 
     - name: Run ESLint
       run: eslint . --ext .js,.jsx,.ts,.tsx
