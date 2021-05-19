@@ -26,13 +26,13 @@ Sprint Retrospective
 - When: 7:40 PM - 8:25 PM
 - Where: Zoom
 ## The agenda of what is discussed
-- We used Retrium to discuss what went well (role/work assignment worked out, CI was built, and design was soldified) and what didn't go so well () during our sprint.
+- We used Retrium to discuss what went well (role/work assignment worked out, CI was built, and design was soldified) and what didn't go so well (lack of communication between subteams, working too close to deadlines) during our sprint.
 - We created an action plan to improve from sprint 1.
   
 ## Any old unresolved business from the previous meeting
 - N/A
 ## Any new business to be discussed
-- 
+- N/A
 ## Anything that was on the agenda but was not discussed (save for next meeting's old business)
 - N/A
 ## Any decisions made & their reasoning (if there were dissenting opinions include them, then write why the group decided to make that decision anyways)
