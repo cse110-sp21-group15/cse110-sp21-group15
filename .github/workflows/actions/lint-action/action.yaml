@@ -6,5 +6,5 @@ runs:
       run: npm install
       shell: bash 
     - name: Run ESLint
-      run: eslint . --ext .js,.jsx,.ts,.tsx
+      run: npx eslint . --ext .js,.jsx,.ts,.tsx
       shell: bash 
