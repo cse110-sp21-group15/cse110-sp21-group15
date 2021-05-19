@@ -28,6 +28,7 @@ Sprint Retrospective
 ## The agenda of what is discussed
 - We used Retrium to discuss what went well (role/work assignment worked out, CI was built, and design was soldified) and what didn't go so well (lack of communication between subteams, working too close to deadlines) during our sprint.
 - We created an action plan to improve from sprint 1.
+- Screenshots added to ./retrospective-1-action-items
   
 ## Any old unresolved business from the previous meeting
 - N/A

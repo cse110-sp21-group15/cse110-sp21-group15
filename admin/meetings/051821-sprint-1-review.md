@@ -30,7 +30,7 @@ Sprint Review
   - Design team shared new logo and updated wireframes for each page with new color palette and fonts   
   - Build team added tools for styling, linting, and automated doc generation. They also produced diagrams and write-ups explaining our intended work flow and how to utilize the tools mentioned above. A kanban board to track our work progress was also created to ensure efficient project management. 
   - Dev team reviewed wireframes to strategize for implementation
-  
+  - Screenshots added to ./sprint-1-review-screenshots
 ## Any old unresolved business from the previous meeting
 - N/A
 ## Any new business to be discussed
