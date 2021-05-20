@@ -13,7 +13,7 @@ jobs:
       steps:
         - uses: actions/checkout@v2
           with:
-            ref: pipeline-phase-1.1
+            ref: pipeline-phase-1.1-update-eslint-config
         - name: Run linter on new code
           uses: ./.github/workflows/actions/lint-action
 
