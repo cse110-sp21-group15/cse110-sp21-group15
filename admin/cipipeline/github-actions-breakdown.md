@@ -43,48 +43,48 @@ in both files. Any time we want to make changes to the actions shared by both
 workflows, we would need to update the action in two places. This could cause
 the actions to be inconsistent with each other if anyone forgot to update an
 action in both workflows. This method might be maintainable if there are only
-two workflows that share actions, but what if there 3 or 5 or 10?
+two workflows that share actions, but what if there are 3? or 5? or 10?!
 [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 for example has 6 different types of branches and if each branch had a workflow,
 there would be 6 different places where one action would have to be updated.
 
 Since actions within workflows are composed of multiple runs: or uses: elements,
 we can write a special type of file that consolidates all of the runs: elements
-of a job's steps and call it with
+of a job's steps and call it in the workflow with
 [uses:](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepsuses).
 (Since actions are reusable units of code, similar to functions in programming,
-they can be written locally, or pulled in from GitHub. Since they can be hosted
-in multiple places, look especially at the difference in providing the path to
-an action hosted in the same repository as our workflow vs providing a path a
-public action that's hosted on GitHub and authored by someone else in the link
-above).
+they can be written locally, or pulled in from GitHub. Because they can be hosted
+in multiple places, there are different ways to specify whether an action is hosted
+in the same repository as a workflow or in a different repository. The document
+explains how to specify in a workflow the path to an action in the same repo vs
+an action in a different repo).
 
 ## Composite Run Steps Actions
 Think of [Composite Run Steps
 Actions](https://docs.github.com/en/actions/creating-actions/creating-a-composite-run-steps-action)
-(same disclaimer as before, read through this document as well) as functions in
-programming. They have inputs, outputs, and run some code.
+(same disclaimer as before, read through this document in its entirety as well) 
+as functions in programming. They have inputs, outputs, and run some code.
 
-At their core, they "compose" multiple "run steps" into a single file that can
-be called in different workflows. Instead of having these run steps in a
+At their core, they "compose" multiple "run: steps" into a single file that can
+be called in different workflows. Instead of having these run: steps in a
 workflow under steps:, they can live in their own file.
 
 > One key difference between the steps: section in workflow files vs in 
 > Composite Run Steps Actions files is that only the run: step can be called,
-> i.e., the uses: step **can not** be called. Additionally, after each run: step
-> in a Composite Run Steps Actions file, the shell: must be specified (usually
-> with shell: bash)
+> i.e., the uses: step **can not** be called in an actions file. Additionally,
+> after each run: step in a Composite Run Steps Actions file, the shell: must 
+> be specified (usually as 'shell: bash')
 
 This special type of action allows us to write an action for
 linting/formatting/etc in one place and call it across multiple workflows. 
 
-We can reuse actions!
+We can now reuse actions!
 
 > Our actions live in the root directory under .github/workflows/actions
 > **Each action lives under name-of-action/action.yaml. The individual .yaml files
 > for an action are literally called 'action.yaml'.** GitHub Actions
-> differentiates each action.yaml file by the directory the action.yaml file
-> lives in. So, each action needs to be in its own directory under. When using
+> differentiates each action by the directory the action.yaml file
+> lives in. So, each action needs to be in its own directory. When using
 > the action in a workflow, we provide route to the directory like so:
 > ./.github/workflows/actions/name-of-action
 
@@ -95,7 +95,9 @@ that any Composite Run Steps Actions will run on ubuntu-latest.
 - For each job in a workflow, the first item under steps: must be 'uses:
 actions/checkout@v2'. This action checks out our repository's code on the
 machine that runs our workflow. You can also specify 'with: ref: branch-name' if
-you want to specify that code from a specific branch should be checked out
+you want to specify a specific branch that code should be checked out from. By
+default, code is checked out from the branch that's specified on GitHub to be the default
+branch (in our repo, the default branch is main).
 - The 'steps:' section for both workflows and Composite Run Steps Action is
 defined as a yaml list so you do not need a new '-' character for every line.
 Specifying '-' indicates that you are about to write a new step. Each step
