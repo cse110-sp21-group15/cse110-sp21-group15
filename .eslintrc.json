@@ -1,0 +1,17 @@
+{
+    "env": {                        
+        "node": true,
+        "es2021": true
+    },
+    "extends": [                        // enforce airbnb style guide
+        "airbnb-base"
+    ],
+    "parser": "babel-eslint",           // workaround for errors with the default parser
+    "parserOptions": {                  // specify javascript language options (modules, etc.)
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "rules": {
+        "quotes": ["warn", "double"]    // example of an additional rule
+    }
+}

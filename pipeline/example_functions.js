@@ -13,7 +13,7 @@ const functions = {
             name: 'Zain',
             age: 20
         };
-        return account;
+        return account; // test
     }
 }
 module.exports = functions;
