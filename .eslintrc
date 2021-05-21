@@ -2,9 +2,15 @@
     "env": {
         "node": true
     },
-    "parser": "babel-eslint",        // workaround for default parser working incorrectly
-    "extends": "eslint:recommended", // recommended rules for eslint
+    "extends": [
+        "airbnb-base"
+    ],
+    "parser": "babel-eslint",           // workaround for default parser working incorrectly
+    "parserOptions": {                  // specify javascript language options (ex: modules)
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
     "rules": {
-       "quotes": ["warn", "double"]  // example of a rule
+                                        // "quotes": ["warn", "double"] - example of a rule
     }
 }
