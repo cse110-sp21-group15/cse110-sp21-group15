@@ -15,7 +15,7 @@ How can we redesign our logo to give our brand character?
 ## Decision Drivers 
 
 * Include app colors in logo
-* Clever play on name: JRNL with a bullet icon next to it
+* Clever play on name: JRNL with a bullet icon next to it   
   
 
 ## Considered Options
