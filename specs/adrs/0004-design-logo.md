@@ -22,7 +22,6 @@ How can we redesign our logo to give our brand character?
 
 * We considered the variety of bullet and pencil options from [here] (https://thenounproject.com)
 * We considered different placements of the icon by rotating it and readjusting its position. 
-* … <!-- numbers of options can vary -->
 
 ## Decision Outcome
 
