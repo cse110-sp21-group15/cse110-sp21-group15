@@ -10,7 +10,7 @@ https://github.com/cse110-sp21-group15/cse110-sp21-group15/issues/16
 
 ## Context and Problem Statement
 
-How can we redesign our logo to give our brand character?
+How can we redesign our logo to give our brand character?   
 
 ## Decision Drivers 
 
