@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "generate-docs": "jsdoc -c jsdocs.config.json"
+    "generate-docs": "./node_modules/.bin/jsdoc pipeline -r -c jsdocs.config.json -d docs"
   },
   "repository": {
     "type": "git",
