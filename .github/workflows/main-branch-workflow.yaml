@@ -14,7 +14,7 @@ jobs:
       steps:
         - uses: actions/checkout@v2
           with:
-            ref: pipeline-phase-1.1-jsdocs-action
+            ref: pipeline-phase-1.1-jsdocs
         - name: Run linter on new code
           uses: ./.github/workflows/actions/lint-action
 
@@ -25,7 +25,7 @@ jobs:
       steps:
         - uses: actions/checkout@v2
           with:
-            ref: pipeline-phase-1.1-jsdocs-action
+            ref: pipeline-phase-1.1-jsdocs
         - name: Run full suite of tests on new code
           uses: ./.github/workflows/actions/all-tests-action
 
@@ -35,7 +35,7 @@ jobs:
       steps:
         - uses: actions/checkout@v2
           with:
-            ref: pipeline-phase-1.1-jsdocs-action
+            ref: pipeline-phase-1.1-jsdocs
         - name: Run automatic doc generation
           uses: andstor/jsdoc-action@v1
           with:
