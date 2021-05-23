@@ -4,7 +4,8 @@
   "description": "A bullet journal made in CSE 110 at UCSD. 📓   Meet our [team](./admin/team.md)!",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "generate-docs": "jsdoc -c jsdocs.config.json"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,8 @@
     "eslint": "^7.26.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.2",
-    "jest": "^26.6.3"
+    "jest": "^26.6.3",
+    "jsdoc": "^3.6.7"
   },
   "dependencies": {}
 }
