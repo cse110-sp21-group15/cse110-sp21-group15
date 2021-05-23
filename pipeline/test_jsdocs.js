@@ -4,8 +4,8 @@
  * @param {number} b
  * @returns {number} Sum of a and b
  */
- function sum(a, b) {
-    return a + b;
+function sum(a, b) {
+  return a + b;
 }
 
 /**
@@ -14,5 +14,14 @@
  * @param {string} title - The title of the book.
  * @param {string} author - The author of the book.
  */
- function Book(title, author) { 
+function Book(title, author) {
+}
+
+/**
+ * Represents a car.
+ * @constructor
+ * @param {string} brand - The brand of the car.
+ * @param {string} color - The color of the car.
+ */
+function Car(brand, color) {
 }
