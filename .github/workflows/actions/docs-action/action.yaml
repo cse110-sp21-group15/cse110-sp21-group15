@@ -7,4 +7,9 @@ runs:
       shell: bash 
     - name: Run JSDocs
       run: npm run generate-docs 
+      with: 
+        source_dir: ./pipeline
+        output_dir: ./docs
+        config_file: jsdocs.config.json
       shell: bash 
+
