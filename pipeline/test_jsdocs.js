@@ -1,4 +1,3 @@
-
 /**
  * Returns the sum of a and b
  * @param {number} a
@@ -25,4 +24,13 @@ function Book(title, author) {
  * @param {string} color - The color of the car.
  */
 function Car(brand, color) {
+}
+
+/**
+ * Represents a house.
+ * @constructor
+ * @param {string} location - The location of the house.
+ * @param {string} color - The color of the house.
+ */
+function House(location, color) {
 }
