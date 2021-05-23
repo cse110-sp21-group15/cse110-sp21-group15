@@ -35,13 +35,17 @@ jobs:
 #      needs: format
       steps:
         - uses: actions/checkout@v2
+          with:
+            ref: pipeline-phase-1.1-jsdocs-action
         - name: Run automatic doc generation
           uses: andstor/jsdoc-action@v1
           with:
             ref: pipeline-phase-1.1-jsdocs-action
             source_dir: ./pipeline
+            recurse: true
             output_dir: ./docs
             config_file: jsdocs.config.json
             template: minami
+
 
 
