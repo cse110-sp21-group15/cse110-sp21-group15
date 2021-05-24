@@ -36,18 +36,9 @@ jobs:
         - uses: actions/checkout@v2
           with:
             ref: pipeline-phase-1.1-jsdocs
-        - name: Run automatic doc generation
-          uses: andstor/jsdoc-action@v1
-          with:
-            source_dir: ./pipeline
-            recurse: true
-            output_dir: ./docs
-            config_file: jsdocs.config.json
-            template: minami
-        - name: Deploy
-          uses: peaceiris/actions-gh-pages@v3
-          with:
-            deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-            publish_dir: ./docs
-            publish_branch: gh-pages # OVERWRITES COMMIT HISTORY - DO NOT CHANGE FROM THIS BRANCH
+        - name: Generate documentation
+          uses: ./.github/workflows/actions/docs-action
+
+
+    
 
