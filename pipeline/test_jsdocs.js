@@ -26,11 +26,3 @@ function Book(title, author) {
 function Car(brand, color) {
 }
 
-/**
- * Represents a house.
- * @constructor
- * @param {string} location - The location of the house.
- * @param {string} color - The color of the house.
- */
-function House(location, color) {
-}
