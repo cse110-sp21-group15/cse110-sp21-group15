@@ -1,10 +1,11 @@
-name: Main Branch Action
+name: Main Branch Action 
 
 on: [push, pull_request]
 
 jobs:
 
 # TODO: Make jobs dependent on each other
+# TODO: Change ref to main after testing
 
     lint:
       name: lint-job
@@ -27,4 +28,26 @@ jobs:
             ref: pipeline-phase-1.1
         - name: Run full suite of tests on new code
           uses: ./.github/workflows/actions/all-tests-action
+
+    docs:
+      name: docs-job
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+          with:
+            ref: pipeline-phase-1.1
+        - name: Run automatic doc generation
+          uses: andstor/jsdoc-action@v1
+          with:
+            source_dir: ./pipeline
+            recurse: true
+            output_dir: ./docs
+            config_file: jsdocs.config.json
+            template: minami
+        - name: Deploy
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+            deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+            publish_dir: ./docs
+            publish_branch: gh-pages # OVERWRITES COMMIT HISTORY - DO NOT CHANGE FROM THIS BRANCH
 

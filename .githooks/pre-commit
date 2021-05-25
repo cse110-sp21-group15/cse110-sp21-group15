@@ -6,7 +6,7 @@
 # all staged files and exits with code 0 if there are no issues and
 # if there are issues prompts if you would like to commit anyway.
 
-STAGED_FILES=$(git diff --staged --name-only --diff-filter=ACM | grep ".jsx\{0,1\}$" | grep -v "node_modules")
+STAGED_FILES=$(git diff --staged --name-only --diff-filter=ACM | grep ".jsx\{0,1\}$" | grep -v "node_modules/")
 PASS=true
 
 if [[ "$STAGED_FILES" = "" ]]; then
