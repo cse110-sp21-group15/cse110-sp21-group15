@@ -25,14 +25,6 @@ Git hooks are not tracked by git and are local in the .git/hooks directory by de
 
 Each person must run the command 'git config --local core.hooksPath .githooks' in the root directory of the repo to change their default git hooks directory to this new .githooks directory under version control. To test that this works, feel free to make any edit to the test_linting_functions.js file and commit. The script should run. Then, erase the test commit with 'git reset --soft HEAD^'. 
 
-### CodeClimate plugin
-
-TBD
-
-### To-Do
-
- - Github actions on push 
-
 ## Formatting
 
 ## Automated Code Quality Checks
@@ -40,11 +32,18 @@ TBD
 Automated code quality is currently configured with CodeClimate. Currently, we're trying to see if we can change our repo to private and still keep CodeClimate, as CodeClimate is only free for public repos. We sent an email to support and they should get back to us in a day.
 
 ## Testing
-We are using Jest for all testing in our project
+
+We are using Jest for all testing in our project.
 Testing is implemented using GitHub Actions as well, so upon pushing to the main branch, all unit testing will be ran, and you can only successfully push to main if all unit tests are passed successfully. Unit tests can also be made and tested before pushing for any tests needed.
+
 ## Automatic Doc Generation
+
 We are using JSDocs for our automatic doc generation.
-Using github actions, a command will be run for JSDocs that will generate an html page that automatically documents our code. All it requires is a little work from developers to add JSDoc compatible method descriptions in comments above each method.
+Using github actions, a command will be run for JSDocs that will generate html files that will document our code. The files are deployed to Github Pages on the gh-pages branch of our repository on push and pull request. The static site is deployed to this link: https://cse110-sp21-group15.github.io/cse110-sp21-group15/
+
+Visual Studio Code can automatically generate JSDoc comments for methods if you type '/**' above a given method or constructor. See the .js file to test automatic doc generation in the pipeline directory for examples. Code must be commented in JSDoc format in order for the html files to be automatically generated. 
+
+In the future since we may want to deploy our landing page to Github Pages instead of this static site. We need to explore alternative methods of deployment in general such as Heroku or Firebase Hosting, and rewrite this action. 
 
 ## CI/CD Pipeline
 ![ORBIS Brainstorming MindMap (2)](https://user-images.githubusercontent.com/68146410/118580585-fcb03e80-b744-11eb-9086-ea5297e04562.jpg)
