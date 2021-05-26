@@ -6,3 +6,4 @@ specs/*
 main.yml
 package-lock.json
 package.json
+docs/*
