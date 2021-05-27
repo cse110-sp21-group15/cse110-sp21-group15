@@ -4,6 +4,9 @@ how to setup your environment, how Web Components work, how to add
 attributes to them, making them responsive, walks you through an example
 component, importing fonts, and gets you started on making one on your own.
 
+All of the example code in this guide is currently under the `source` directory
+in the `landing-page` branch.
+
 # Git Setup
 I started a landing-page branch from development for us to start committing
 source code to the repo. It won't be in your local repo by default so run if
