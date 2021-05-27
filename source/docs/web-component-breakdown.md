@@ -5,13 +5,39 @@ attributes to them, making them responsive, walks you through an example
 component, and gets you started on making one on your own.
 
 # Git Setup
-I started a landing-page branch from development for us to start committing source code to the repo. It won't be in your local repo by default so run
+I started a landing-page branch from development for us to start committing
+source code to the repo. It won't be in your local repo by default so run if
+you're working on the landing-page:
+
 
 ```
 git checkout -b landing-page origin/landing-page
 ```
 
-to create a new branch called landing-page that tracks the landing-page branch in the GitHub repo.
+
+This command creates a new branch called landing-page that tracks the
+landing-page branch in the GitHub repo.
+
+If you're starting a new branch, first switch to development
+
+```
+git chekout development
+```
+
+create a new branch which is named after the feature or page you're working on
+and switch to it with
+
+```
+git chekout -b some-feature-branch
+```
+
+then set push the branch to GitHub via
+
+```
+git push -u origin some-feature-branch
+```
+
+This new branch should now be visible on GitHub.
 
 # Dev setup
 You can add the source code of your component to `source/components`. In order to see what you're working on, replace the `<h2></h2>` element under the `<main></main>` component with the name of your new component in `index.html`.
