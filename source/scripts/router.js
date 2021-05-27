@@ -35,7 +35,7 @@ router.setState = (state, statePopped) => {
 
       // Don't push the home page to history multiple times.
       // An empty state indicates is for the home page
-      if(state === "") {
+      if(state === "" && window.location.hash === "") {
         return;
       }
 
