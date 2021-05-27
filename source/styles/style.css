@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Amaranth";
+  src: url(./Amaranth/Amaranth-Regular.ttf) format("truetype")
+}
+@font-face {
+  font-family: "Mulish";
+  src: url(./Mulish/static/Mulish-Regular.ttf) format("truetype")
+}
+.navbar {
+  display: flex;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-bottom: 97px;
+}
+@media (min-width: 920px) {
+  .navigation-items {
+    display: flex;
+    margin-left: auto;
+    margin-right: 1%;
+  }
+  .navbar-mini {
+    display: none;
+  }
+}
+@media (max-width: 919px) {
+  .navigation-items {
+    display: none;
+  }
+  .navbar-mini {
+    display: flex;
+    margin-left: auto;
+    margin-right: 1%;
+  }
+
+}
+.navbar-logo {
+  justify-items: flex-start;
+}
+body {
+  margin: 0px;
+}
+img {
+  width: 200px;
+  height: auto;
+  margin-left: 1%;
+  margin-top: 1%;
+}
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: "Amoranth";
+  text-align: center;
+  color: #344FA1;
+}
+/*TODO: MIGHT NOT NEED THIS */
+.logo-button {
+  margin-left: 1%;
+  margin-top: 20px;
+}
+button, input[type="submit"], input[type="reset"] {
+  /* Remove default styling */
+	background: none;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  outline: inherit;
+
+  /* Add custom styling */
+	font-size: 36px;
+  font-weight: bold;
+  font-family: "Mulish";
+  text-align: center;
+  color: #3F3697;
+  margin-left: 30px;
+
+  transition: color 0.5s;
+}
+button:hover {
+  color: #5f52d8;
+}
+svg {
+  fill: #3d84b8;
+  transition: fill 0.5s;
+}
+svg:hover {
+  fill: #4aa3e3;
+}
+footer {
+  font-family: "Mulish";
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: -1.5%;
+  padding-left: 10%;
+}
