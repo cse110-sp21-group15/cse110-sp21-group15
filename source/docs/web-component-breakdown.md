@@ -2,7 +2,7 @@
 This guide takes you through creating configurable Web Components. It explains
 how to setup your environment, how Web Components work, how to add
 attributes to them, making them responsive, walks you through an example
-component, and gets you started on making one on your own.
+component, importing fonts, and gets you started on making one on your own.
 
 # Git Setup
 I started a landing-page branch from development for us to start committing
@@ -218,6 +218,9 @@ The key property here is `flex-wrap`. You want to set it to `flex-wrap: column` 
 
 # Buttons
 You can check `feautre-page.js` to see how I made a button and how to have them `transition` to different colors when you hover or them (you should be able to copy over the css for the most part, just make sure that the button styling is supposed to be the same- on figma you can click on the button, head to the inspect column on inspector on the right hand side, and scroll down to the css section. don't copy everything though because it also gives you absolute positions for the css which we don't want).
+
+# Fonts
+Check `aFeature.js` to see how fonts are imported and used
 
 # Conclusion
 If after reading this guide there are have any questions, shoot me a DM!
