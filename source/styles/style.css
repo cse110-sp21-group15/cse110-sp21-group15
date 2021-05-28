@@ -13,23 +13,36 @@
   margin-bottom: 97px;
 }
 @media (min-width: 920px) {
-  .navigation-items {
-    display: flex;
-    margin-left: auto;
-    margin-right: 1%;
-  }
   .navbar-mini {
     display: none;
+  }
+  .navbar-RHS {
+    display: flex;
+    margin-left: auto;
+    margin-top: 20px;
   }
 }
 @media (max-width: 919px) {
-  .navigation-items {
+  .navigation-items-inactive {
     display: none;
+    margin-top: 20px;
+  }
+  .navigation-items-active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 20px;
   }
   .navbar-mini {
     display: flex;
     margin-left: auto;
-    margin-right: 1%;
+    margin-top: 15px;
+  }
+  .navbar-RHS {
+    display: flex;
+    margin-left: auto;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
   }
 
 }
@@ -52,10 +65,11 @@ h1 {
   text-align: center;
   color: #344FA1;
 }
-/*TODO: MIGHT NOT NEED THIS */
 .logo-button {
+  display: flex;
   margin-left: 1%;
   margin-top: 20px;
+  justify-content: flex-start;
 }
 button, input[type="submit"], input[type="reset"] {
   /* Remove default styling */
