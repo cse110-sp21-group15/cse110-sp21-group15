@@ -8,9 +8,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="89.627129mm"
-   height="80.828094mm"
-   viewBox="0 0 89.627123 80.828094"
+   width="113.62617mm"
+   height="113.62429mm"
+   viewBox="0 0 113.62616 113.62429"
    version="1.1"
    id="svg2956"
    inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
@@ -68,10 +68,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="464.91283"
-     inkscape:cy="317.86188"
+     inkscape:cx="512.15675"
+     inkscape:cy="379.10755"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer5"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:window-width="1431"
@@ -94,8 +94,7 @@
   <g
      inkscape:groupmode="layer"
      id="layer5"
-     inkscape:label="Layer 2"
-     transform="translate(-12.499952,-16.204583)">
+     inkscape:label="Layer 2">
     <path
        style="fill:url(#linearGradient1550);fill-opacity:1;stroke-width:16.106"
        id="rect885"
@@ -112,7 +111,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-51.343576,-47.985234)">
+     transform="translate(-38.843623,-31.78065)">
     <path
        style="fill:#f9f6e7;fill-opacity:1;stroke-width:0.499199"
        d="m 69.351481,99.363936 c -0.894518,0 -10.208504,10.471384 -12.895975,14.498394 -4.575012,6.8557 -6.389028,13.14971 -4.164041,14.44861 1.303803,0.76114 5.078933,0.6427 8.136764,-0.25549 5.612722,-1.64865 22.154656,-11.48832 22.154656,-13.17844 0,-0.61948 -12.70302,-15.513074 -13.231404,-15.513074 z"
