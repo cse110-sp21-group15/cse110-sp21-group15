@@ -47,5 +47,8 @@ Testing is implemented using GitHub Actions as well, so upon pushing to the main
 
 ## Automatic Doc Generation
 
-We are using JSDocs for our automatic doc generation.
-Using github actions, a command will be run for JSDocs that will generate an html page that automatically documents our code. All it requires is a little work from developers to add JSDoc compatible method descriptions in comments above each method.
+We are using JSDocs for our automatic doc generation. Using github actions, a command will be run for JSDocs that will generate html files that will document our code. The files are deployed to Github Pages on the gh-pages branch of our repository on push and pull request. The static site is deployed to this link: https://cse110-sp21-group15.github.io/cse110-sp21-group15/
+
+Visual Studio Code can automatically generate JSDoc comments for methods if you type '/**' above a given method or constructor. See the .js file to test automatic doc generation in the pipeline directory for examples. Code must be commented in JSDoc format in order for the html files to be automatically generated.
+
+In the future since we may want to deploy our landing page to Github Pages instead of this static site. We need to explore alternative methods of deployment in general such as Heroku or Firebase Hosting, and rewrite this action.
