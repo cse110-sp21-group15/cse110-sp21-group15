@@ -1,3 +1,5 @@
+import { router } from '../scripts/router.js';
+
 class FeaturePage extends HTMLElement {
     constructor() {
       super();
@@ -82,27 +84,34 @@ class FeaturePage extends HTMLElement {
             <header>
                 <h1 class="header">Features</h1>
             </header>
-            <main></main>
-            <a-feature title="Rapid Logging"
-                       description=""
-                       src="./media/rapid-logging-example.png"></a-feature>
-            <a-feature title="Migration"
-                       description=""
-                       src="./media/migration-example.png"
-                       alternateBackgroundColor=true
-                       swapImageAndText=true></a-feature>
-            <a-feature title="Custom Collections"
-                       description=""
-                       src="./media/custom-collection-example.png"></a-feature>   
+            <main>
+            <feature-component title="Rapid Logging"
+                               description=""
+                               src="./media/rapid-logging-example.png"></feature-component>
+            <feature-component title="Migration"
+                               description=""
+                               src="./media/migration-example.png"
+                               alternateBackgroundColor=true
+                               alignment="right"></feature-component>
+            <feature-component title="Custom Collections"
+                               description=""
+                               src="./media/custom-collection-example.png"></feature-component>
             <h5 class="button-description">Lorum ipsam voluptatem quia voluptas sit aspernatur</h5>
             <div class="align-button">
                 <button class="start-jrnling-button" type="button">Start JRNLing</button>
             </div>
+            </main>
             <script src="./components/aFeature.js" type="module"></script>
           </section>
           `;
       this.attachShadow({ mode: 'open' })
       this.shadowRoot.appendChild(template.content.cloneNode(true))
+
+      // Go to Download page from button on the Features page
+      const featuresPageButton = this.shadowRoot.querySelector('button');
+      featuresPageButton.addEventListener('click', () => {
+        router.setState('download', false);
+      });
     }
   }
   

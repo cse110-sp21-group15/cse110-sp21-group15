@@ -1,4 +1,4 @@
-class aFeature extends HTMLElement {
+class featureComponent extends HTMLElement {
   constructor() {
     super();
 
@@ -26,15 +26,25 @@ class aFeature extends HTMLElement {
             flex-direction: row-reverse;
             text-align: right;
           }
+          .feature.vertical-align {
+            flex-direction: column-reverse;
+            text-align: center;
+          }
           .feature.alternate-background-color {
             background-color: #F9F6E7;
           }
           .feature-title-text {
             color: #344FA1;
           }
+          .feature-title-text.alternate-title-color {
+            color: #3F3697;
+          }
           .feature-description {
             max-width: 450px;
             margin-bottom: 50px;
+          }
+          .feature-description.vertical-align {
+            max-width: 400px;
           }
           .feature-text-section {
             display: flex;
@@ -46,8 +56,26 @@ class aFeature extends HTMLElement {
             margin-right: 5%;
             margin-bottom: 50px;
           }
+          .feature-image-section.mini {            
+            margin-right: 25%;
+            margin-left: 10%;
+            margin-bottom: 50px;
+          }
           .feature-image-section.swap-image-and-text {
             margin-left: 5%;
+            margin-right: 0;
+            margin-bottom: 50px;
+          }
+          .feature-image-section.swap-image-and-text.mini {
+            margin-left: 25%;
+            margin-right: 10%;
+          }
+          .feature-image-section.vertical-align {
+            margin-left: 0;
+            margin-right: 0;
+          }
+          .feature-text-section.vertical-align {
+            margin-left: 0;
             margin-right: 0;
           }
           .feature-image {
@@ -60,14 +88,46 @@ class aFeature extends HTMLElement {
             font-size: 48px;
             font-family: Amaranth;
             font-weight: 700;
+            max-width: 450px;
+          }
+          h3.mini {
+            font-size: 36px;
+            line-height: 28px;
+            font-weight: bold;
+            line-height: 36px;
+            max-width: 335px;
           }
           p {
             font-size: 30px;
             font-family: Mulish;
             font-weight: 400;
           }
+          p.mini {
+            font-size: 22px;
+            line-height:28px;
+            max-width: 335px;
+          }
           img {
             border: solid #344FA1;
+          }
+          img.alternate-border-color {
+            border: solid #3F3697;
+          }
+          img.mini {
+            width: 200px;
+          }
+          img.big {
+            width: 550px;
+          }
+          @media (min-width: 1199px) {
+            img.big {
+              width: 550px;
+            }
+          }
+          @media (max-width: 1198px) {
+            img.big {
+              width: 400px;
+            }
           }
         </style>
 
@@ -91,11 +151,14 @@ class aFeature extends HTMLElement {
     const title = this.getAttribute('title');
     const description = this.getAttribute('description');
     const imgSrc = this.getAttribute('src');
-    const imgWidth = this.getAttribute('width');
+    const imgSize = this.getAttribute('imgSize');
+    const alignment = this.getAttribute('alignment');
     const alternateBackgroundColor = this.getAttribute('alternateBackgroundColor');
-    const swapImageAndText = this.getAttribute('swapImageAndText');
+    const alternateTitleColor = this.getAttribute('alternateTitleColor');
+    const alternateBorderColor = this.getAttribute('alternateBorderColor');
+    const textSize = this.getAttribute('textSize');
 
-    // Set attributes
+    // Apply css classes based on value of attributes
     if(title) {
       this.shadowRoot.querySelector('.feature-title-text').innerText = title;
     } else {
@@ -115,16 +178,39 @@ class aFeature extends HTMLElement {
       this.shadowRoot.querySelector('.feature-image').src = "";
     }
 
-    if(alternateBackgroundColor) {
-      this.shadowRoot.querySelector('.feature').classList.add("alternate-background-color");
+    if(imgSize === "mini") {
+      this.shadowRoot.querySelector('img').classList.add("mini");
+      this.shadowRoot.querySelector('.feature-image-section').classList.add("mini");
+    } else if (imgSize === "big") {
+      this.shadowRoot.querySelector('img').classList.add("big");
     }
 
-    if(swapImageAndText) {
+    if(alignment === "vertical") {
+      this.shadowRoot.querySelector('.feature').classList.add("vertical-align");
+      this.shadowRoot.querySelector('.feature-image-section').classList.add("vertical-align");
+      this.shadowRoot.querySelector('.feature-text-section').classList.add("vertical-align");
+    } else if (alignment === "right") {
       this.shadowRoot.querySelector('.feature').classList.add("swap-image-and-text");
       this.shadowRoot.querySelector('.feature-image-section').classList.add("swap-image-and-text");
     }
 
+    if(alternateBackgroundColor === "true") {
+      this.shadowRoot.querySelector('.feature').classList.add("alternate-background-color");
+    }
+
+    if(alternateTitleColor) {
+      this.shadowRoot.querySelector('.feature-title-text').classList.add("alternate-title-color");
+    }
+
+    if(alternateBorderColor === "true") {
+      this.shadowRoot.querySelector('img').classList.add("alternate-border-color");
+    }
+    
+    if(textSize === "mini") {
+      this.shadowRoot.querySelector('h3').classList.add("mini");
+      this.shadowRoot.querySelector('p').classList.add("mini");
+    }
   }
 }
 
-customElements.define('a-feature', aFeature);
+customElements.define('feature-component', featureComponent);
