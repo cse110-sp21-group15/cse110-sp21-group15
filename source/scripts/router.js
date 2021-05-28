@@ -81,8 +81,7 @@ function featuresPage(goTo) {
  */
 function downloadPage(goTo) {
   if (goTo) {
-    let downloadPage = document.createElement('h1');
-    downloadPage.innerHTML = "Download page placeholder";
+    let downloadPage = document.createElement('download-hero');
     main.appendChild(downloadPage);
   } else {
     if(main.firstChild) {
