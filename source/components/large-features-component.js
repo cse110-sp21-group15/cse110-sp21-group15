@@ -1,4 +1,4 @@
-class largeFeaturesComponent extends HTMLElement {
+class LargeFeaturesComponent extends HTMLElement {
     constructor() {
       super();
   
@@ -45,4 +45,4 @@ class largeFeaturesComponent extends HTMLElement {
       this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 }
-customElements.define('large-features-component', largeFeaturesComponent);
+customElements.define('large-features-component', LargeFeaturesComponent);

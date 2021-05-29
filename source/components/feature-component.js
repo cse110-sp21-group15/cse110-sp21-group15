@@ -203,4 +203,4 @@ class FeatureComponent extends HTMLElement {
   }
 }
 
-customElements.define('feature-component', featureComponent);
+customElements.define('feature-component', FeatureComponent);

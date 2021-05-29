@@ -51,4 +51,4 @@ class GridFeaturesComponent extends HTMLElement {
       this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 }
-customElements.define('grid-features-component', gridFeaturesComponent);
+customElements.define('grid-features-component', GridFeaturesComponent);

@@ -98,4 +98,4 @@ class RowFeaturesComponent extends HTMLElement {
       });
     }
 }
-customElements.define('row-features-component', rowFeaturesComponent);
+customElements.define('row-features-component', RowFeaturesComponent);
