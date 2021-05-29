@@ -1,4 +1,4 @@
-class featureComponent extends HTMLElement {
+class FeatureComponent extends HTMLElement {
   constructor() {
     super();
 

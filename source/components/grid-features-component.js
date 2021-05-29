@@ -1,4 +1,4 @@
-class gridFeaturesComponent extends HTMLElement {
+class GridFeaturesComponent extends HTMLElement {
     constructor() {
       super();
   

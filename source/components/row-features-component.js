@@ -1,6 +1,6 @@
 import { router } from '../scripts/router.js';
 
-class rowFeaturesComponent extends HTMLElement {
+class RowFeaturesComponent extends HTMLElement {
     constructor() {
       super();
   
