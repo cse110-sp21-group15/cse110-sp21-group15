@@ -110,6 +110,7 @@ class FeaturePage extends HTMLElement {
       // Go to Download page from button on the Features page
       const featuresPageButton = this.shadowRoot.querySelector('button');
       featuresPageButton.addEventListener('click', () => {
+        window.scroll(0,0);
         router.setState('download', false);
       });
     }
