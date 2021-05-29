@@ -57,6 +57,7 @@ class featureComponent extends HTMLElement {
             margin-bottom: 50px;
           }
           .feature-image-section.swap-image-and-text {
+            margin-right: 0;
             margin-left: 50px;
             margin-bottom: 50px;
           }
@@ -170,7 +171,6 @@ class featureComponent extends HTMLElement {
 
     if(imgSize === "mini") {
       this.shadowRoot.querySelector('img').classList.add("mini");
-      this.shadowRoot.querySelector('.feature-image-section').classList.add("mini");
     } else if (imgSize === "big") {
       this.shadowRoot.querySelector('img').classList.add("big");
     }
