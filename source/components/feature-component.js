@@ -52,23 +52,13 @@ class featureComponent extends HTMLElement {
             margin-left: 5%;
             margin-right: 5%;
           }
-          .feature-image-section {            
-            margin-right: 5%;
-            margin-bottom: 50px;
-          }
-          .feature-image-section.mini {            
-            margin-right: 25%;
-            margin-left: 10%;
+          .feature-image-section {
+            margin-right: 50px;
             margin-bottom: 50px;
           }
           .feature-image-section.swap-image-and-text {
-            margin-left: 5%;
-            margin-right: 0;
+            margin-left: 50px;
             margin-bottom: 50px;
-          }
-          .feature-image-section.swap-image-and-text.mini {
-            margin-left: 25%;
-            margin-right: 10%;
           }
           .feature-image-section.vertical-align {
             margin-left: 0;
