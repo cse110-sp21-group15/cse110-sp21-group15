@@ -45,13 +45,6 @@ class gridFeaturesComponent extends HTMLElement {
                                  src="media/rapid-logging-example.png">
               </feature-component>
             </div>
-            <feature-component imgSize=mini
-                                 textSize=mini
-                                 alignment=vertical
-                                 src="media/rapid-logging-example.png">
-              </feature-component>
-              <feature-component src="media/rapid-logging-example.png">
-              </feature-component>
           </section>
           `;
       this.attachShadow({ mode: 'open' });
