@@ -9,6 +9,7 @@ class GridFeaturesComponent extends HTMLElement {
             .grid {
               display: flex;
               flex-direction: column;
+              margin-bottom: 60px;
             }
             .row {
               display: flex;
@@ -19,8 +20,25 @@ class GridFeaturesComponent extends HTMLElement {
             feature-component {
               flex-grow: 2;
             }
+          .header {
+              margin-top: 60px;
+              margin-left: 5%;
+              font-size: 96px;
+              font-family: "Amaranth";
+              font-weight: 700;
+              color: #3F3697;
+              max-width: 1100px;
+          }
+          @media (max-width: 600px) {
+            .header {
+              font-size: 50px;
+            }
+          }
           </style>
           <section class="grid">
+            <header>
+              <h1 class="header">Track your assignments and goals thoughtfully</h1>
+            </header>
             <div class="row">
               <feature-component imgSize=mini
                                  textSize=mini

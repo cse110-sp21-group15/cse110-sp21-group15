@@ -11,6 +11,7 @@ class RowFeaturesComponent extends HTMLElement {
             section {
                 display: flex;
                 flex-direction: column;
+                align-items: center;
             }
             .row {
                 display: flex;
@@ -19,8 +20,23 @@ class RowFeaturesComponent extends HTMLElement {
                 justify-content: space-around;
             }
             feature-component {
-                margin-left: 2%;
-                margin-right: 2%;
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            .header {
+                margin-top: 60px;
+                margin-left: 5%;
+                font-size: 96px;
+                font-family: "Amaranth";
+                font-weight: 700;
+                color: #3F3697;
+                max-width: 1100px;
+                text-align: center;
+            }
+            @media (max-width: 619px) {
+                .header {
+                    font-size: 60px;
+                }
             }
             .align-button {
                 display: flex;
@@ -64,6 +80,9 @@ class RowFeaturesComponent extends HTMLElement {
             }
           </style>
           <section class="">
+          <header>
+              <h1 class="header">Make the most out of your JRNL</h1>
+            </header>
             <div class="row">
                 <feature-component alignment=vertical
                                 textSize=mini
