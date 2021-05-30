@@ -1,4 +1,4 @@
-class DownloadHero extends HTMLElement {
+class DownloadHeroComponent extends HTMLElement {
     constructor() {
         super();
 
@@ -67,11 +67,11 @@ class DownloadHero extends HTMLElement {
               letter-spacing: -0.015em;
               color: #F0EBCC;
               background-color: #344FA1;
-              border-radius: 6px;
-              padding-left: 12px;
-              padding-right: 12px;
-              padding-top: 12px;
-              padding-bottom: 12px;
+              border-radius: 5px;
+              padding-left: 44px;
+              padding-right: 44px;
+              padding-top: 15px;
+              padding-bottom: 15px;
               max-width: 350px;
             }
             button, input[type="submit"], input[type="reset"] {
@@ -104,7 +104,7 @@ class DownloadHero extends HTMLElement {
             </section>
             <section class="hero-text-section">
                 <p class="hero-description"></p>
-                <button class="download-button" type="button">Download JRNL</button>
+                <button class="download-button" type="button">Install JRNL</button>
                 <p class="hero-os-display"></p>
             </section>   
   
@@ -149,4 +149,4 @@ class DownloadHero extends HTMLElement {
     }
 }
 
-customElements.define('download-hero', DownloadHero);
+customElements.define('download-hero-component', DownloadHeroComponent);

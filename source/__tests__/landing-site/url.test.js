@@ -1,4 +1,4 @@
-describe('Basic User Flow Tests', () => {
+describe('Basic URL Tests', () => {
     beforeAll(async () => {
       await page.goto('http://127.0.0.1:5500/source');
       await page.waitForTimeout(500);
