@@ -1,0 +1,10 @@
+name: test-action
+runs:
+  using: "composite"
+  steps:
+    - name: Install modules
+      run: yarn
+      shell: bash
+    - name: Run tests
+      run: yarn test
+      shell: bash
