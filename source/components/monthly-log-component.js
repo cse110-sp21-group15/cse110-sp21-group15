@@ -24,8 +24,12 @@ class logComponent extends HTMLElement {
           .log-main-section {
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
             background: #F9F6E7;
-            padding-right: 25%;
+            border-radius: 5px;
+            width: 90%;
+            max-width: 65em;
           }
 
           .log-form-section {
@@ -40,7 +44,7 @@ class logComponent extends HTMLElement {
           }
 
           .log-calendar-section {
-            margin: 5%;
+            margin: 3em;
           }
 
           .log-calendar-month-text {
@@ -49,7 +53,6 @@ class logComponent extends HTMLElement {
             font-weight: bold;
             font-size: 64px;
             line-height: 78px;
-            align-items: center;
             text-align: center;
             letter-spacing: -0.015em;
           }
@@ -76,6 +79,9 @@ class logComponent extends HTMLElement {
             padding-right: 12px;
             padding-top: 12px;
             padding-bottom: 12px;
+            margin-left: 25px;
+            margin-right: 150px;
+            margin-bottom: 30px;
             max-width: 350px;
           }
               
@@ -101,6 +107,19 @@ class logComponent extends HTMLElement {
             background-color: #5f52d8;
           }
 
+          @media (min-width: 800px) {
+            .log-form-section {
+              margin-top: 3em;
+              margin-left: 3em;
+            }
+          }
+
+          @media (max-width: 599px) {
+            .log-title-text {
+              margin-left: 1em;
+            }
+          }
+
           </style>
           <section class="log">
             <section class="log-title-section">
@@ -110,7 +129,7 @@ class logComponent extends HTMLElement {
             <section class="log-calendar-section">
               <h2 class="log-calendar-month-text"></h2>
                 <img class="log-calendar-image-placeholder" 
-                  src="./media/calendar-icon.png"
+                  src="./media/calendar-icon.svg"
                   alt="please enter a valid path">
             </section>
             <section class="log-form-section">
