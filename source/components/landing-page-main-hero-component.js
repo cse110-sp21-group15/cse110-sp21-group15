@@ -87,7 +87,12 @@ class LandingPageMainHeroComponent extends HTMLElement {
                 background-color: #5f52d8;
             }
             object {
-              margin-bottom: 100px;
+                margin-bottom: 100px;
+            }
+            .hero-anim {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
           </style>
 
@@ -98,9 +103,12 @@ class LandingPageMainHeroComponent extends HTMLElement {
                     <button class="button-to-different-page" type="button"></button>
                 </div>
             </div>
-            <object type="image/svg+xml" 
-                    data="media/digitalBuJoAnimated.svg"
-                    width="600"></object>
+            <div class="hero-anim">
+              <object type="image/svg+xml" 
+                      data="media/digitalBuJoAnimated.svg"
+                      width="750px"
+                      height="auto"></object>
+            </div>
           </section>
           `;
       this.attachShadow({ mode: 'open' });
