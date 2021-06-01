@@ -1,4 +1,4 @@
-class logComponent extends HTMLElement {
+class monthlyLogComponent extends HTMLElement {
   constructor() {
     super();
 
@@ -15,13 +15,13 @@ class logComponent extends HTMLElement {
             src: url(./Mulish/static/Mulish-Regular.ttf) format("truetype")
           }
 
-          .log {
+          .monthly-log {
             display: flex;
             flex-direction: column;
             align-items: center;
           }
 
-          .log-main-section {
+          .monthly-log-main-section {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -32,22 +32,22 @@ class logComponent extends HTMLElement {
             max-width: 65em;
           }
 
-          .log-form-section {
+          .monthly-log-form-section {
             display: flex;
             flex-direction: column;
           }
 
-          .log-title-text {
-            font-family: "Amaranth";
+          .monthly-log-title-text {
+            font-family: Amaranth;
             font-size: 96px;
             color: #344FA1;
           }
 
-          .log-calendar-section {
+          .monthly-log-calendar-section {
             margin: 3em;
           }
 
-          .log-calendar-month-text {
+          .monthly-log-calendar-month-text {
             font-family: Amaranth;
             font-style: normal;
             font-weight: bold;
@@ -57,7 +57,7 @@ class logComponent extends HTMLElement {
             letter-spacing: -0.015em;
           }
 
-          .log-bullets {
+          .monthly-log-bullets {
             font-family: Mulish;
             font-style: normal;
             font-weight: normal;
@@ -108,32 +108,32 @@ class logComponent extends HTMLElement {
           }
 
           @media (min-width: 800px) {
-            .log-form-section {
+            .monthly-log-form-section {
               margin-top: 3em;
               margin-left: 3em;
             }
           }
 
           @media (max-width: 599px) {
-            .log-title-text {
+            .monthly-log-title-text {
               margin-left: 1em;
             }
           }
 
           </style>
-          <section class="log">
-            <section class="log-title-section">
-              <h2 class="log-title-text"><h2>
+          <section class="monthly-log">
+            <section class="monthly-log-title-section">
+              <h2 class="monthly-log-title-text"><h2>
             </section>
-          <section class="log-main-section">
-            <section class="log-calendar-section">
-              <h2 class="log-calendar-month-text"></h2>
-                <img class="log-calendar-image-placeholder" 
+          <section class="monthly-log-main-section">
+            <section class="monthly-log-calendar-section">
+              <h2 class="monthly-log-calendar-month-text"></h2>
+                <img class="monthly-log-calendar-image-placeholder" 
                   src="./media/calendar-icon.svg"
                   alt="please enter a valid path">
             </section>
-            <section class="log-form-section">
-              <ul class="log-bullets">
+            <section class="monthly-log-form-section">
+              <ul class="monthly-log-bullets">
                 <li>2: laundry</li>
                 <li>14: grocery shopping</li>
               </ul>
@@ -151,17 +151,17 @@ class logComponent extends HTMLElement {
 
         // Apply css classes based on value of attributes
         if (title) {
-            this.shadowRoot.querySelector('.log-title-text').innerText = title;
+            this.shadowRoot.querySelector('.monthly-log-title-text').innerText = title;
         } else {
-            this.shadowRoot.querySelector('.log-title-text').innerText = "Viv's January"
+            this.shadowRoot.querySelector('.monthly-log-title-text').innerText = "Viv's January"
         }
 
         if (month) {
-            this.shadowRoot.querySelector('.log-calendar-month-text').innerText = month;
+            this.shadowRoot.querySelector('.monthly-log-calendar-month-text').innerText = month;
         } else {
-            this.shadowRoot.querySelector('.log-calendar-month-text').innerText = "JAN";
+            this.shadowRoot.querySelector('.monthly-log-calendar-month-text').innerText = "JAN";
         }
     }
 }
 
-customElements.define('log-component', logComponent);
+customElements.define('monthly-log-component', monthlyLogComponent);
