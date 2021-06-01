@@ -1,4 +1,4 @@
-class monthlyLogComponent extends HTMLElement {
+class MonthlyLogComponent extends HTMLElement {
   constructor() {
     super();
 
@@ -164,4 +164,4 @@ class monthlyLogComponent extends HTMLElement {
     }
 }
 
-customElements.define('monthly-log-component', monthlyLogComponent);
+customElements.define('monthly-log-component', MonthlyLogComponent);
