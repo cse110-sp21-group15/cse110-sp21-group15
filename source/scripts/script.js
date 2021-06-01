@@ -20,34 +20,35 @@ window.addEventListener('popstate', e => {
 
 // Go to home page when home-button is clicked
 homeButton.addEventListener('click', () => {
-  console.log("Home clicked");
+  window.scroll(0,0);
   router.setState('', false); // home state needs to be blank by default
   hideMenuOptionsAfterClickingButtonIfMenuOpen()
 });
 
 // Go to home page when the logo is clicked
 logoButton.addEventListener('click', () => {
-  console.log("Logo clicked");
+  window.scroll(0,0);
   router.setState('', false); // home state needs to be blank by default
   hideMenuOptionsAfterClickingButtonIfMenuOpen()
 });
 
 // Go to features page when features-button is clicked
 featuresButton.addEventListener('click', () => {
-  console.log("Features clicked");
+  window.scroll(0,0);
   router.setState('features', false);
   hideMenuOptionsAfterClickingButtonIfMenuOpen()
 });
 
 // Go to features page when features-button is clicked
 downloadButton.addEventListener('click', () => {
-  console.log("Features clicked");
+  window.scroll(0,0);
   router.setState('download', false);
   hideMenuOptionsAfterClickingButtonIfMenuOpen()
 });
 
 // Go to features page when features-button is clicked
 menuButton.addEventListener('click', () => {
+  window.scroll(0,0);
   navigationButtonList.classList.toggle("navigation-items-active");
   navigationButtonList.classList.toggle("navigation-items-inactive");
 });

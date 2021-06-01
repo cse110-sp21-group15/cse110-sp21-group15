@@ -22,6 +22,9 @@ class FeaturePage extends HTMLElement {
             align-items: stretch;
             margin: 0px;
           }
+          section {
+            margin-top: 100px;
+          }
           .header {
             margin: 0.3rem;
             margin-left: 5%;
@@ -104,15 +107,16 @@ class FeaturePage extends HTMLElement {
             <script src="./components/aFeature.js" type="module"></script>
           </section>
           `;
-      this.attachShadow({ mode: 'open' })
-      this.shadowRoot.appendChild(template.content.cloneNode(true))
+      this.attachShadow({ mode: 'open' });
+      this.shadowRoot.appendChild(template.content.cloneNode(true));
 
       // Go to Download page from button on the Features page
       const featuresPageButton = this.shadowRoot.querySelector('button');
       featuresPageButton.addEventListener('click', () => {
+        window.scroll(0,0);
         router.setState('download', false);
       });
     }
-  }
+}
   
   customElements.define('feature-page', FeaturePage);

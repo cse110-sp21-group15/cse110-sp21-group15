@@ -54,8 +54,7 @@ router.setState = (state, statePopped) => {
   // If visiting the home page, add the home component
   if(goTo) {
     // TODO replace createElement('p') with home page component
-    const homePage = document.createElement("h1");
-    homePage.innerHTML = "Home page place holder";
+    const homePage = document.createElement("landing-page");
     main.appendChild(homePage);
   }
 
@@ -81,7 +80,7 @@ function featuresPage(goTo) {
  */
 function downloadPage(goTo) {
   if (goTo) {
-    let downloadPage = document.createElement('download-hero');
+    let downloadPage = document.createElement('download-page');
     main.appendChild(downloadPage);
   } else {
     if(main.firstChild) {
