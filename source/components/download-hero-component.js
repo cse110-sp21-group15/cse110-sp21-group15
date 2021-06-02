@@ -5,113 +5,113 @@ class DownloadHeroComponent extends HTMLElement {
         const template = document.createElement('template');
 
         template.innerHTML = `
-          <style>
-            @font-face {
-              font-family: "Amaranth";
-              src: url(./Amaranth/Amaranth-Regular.ttf) format("truetype")
-            }
-            @font-face {
-              font-family: "Mulish";
-              src: url(./Mulish/static/Mulish-Regular.ttf) format("truetype")
-            }
-            .hero {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              flex-wrap: wrap;
-              padding-top: 100px;
-              padding-bottom: 60px;
-              background-color: #F0EBCC
-            }
-            .hero-logo-section {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              margin-left: 3.5%;
-              margin-bottom: 25px;
-            }
-            .logo-image {
-              width: 350px;
-              height: auto;
-            }
-            .hero-text-section {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              margin-left: 5%;
-              margin-right: 5%;
-            }
-            .hero-description {
-              max-width: 500px;
-              margin-bottom: 60px;
-            }
-            p.hero-description {
-              font-size: 30px;
-              font-family: Amaranth;
-              font-weight: bold;
-              color: #3F3697;
-              text-align: center;
-            }
-            p.hero-os-display {
-              font-family: "Mulish";
-              font-size: 20px;
-              text-align: center;
-              color: #3D84B8;
-            }
-            .download-button {
-              font-family: "Mulish";
-              font-weight: bold;
-              font-size: 26px;
-              text-align: center;
-              letter-spacing: -0.015em;
-              color: #F0EBCC;
-              background-color: #344FA1;
-              border-radius: 5px;
-              padding-left: 44px;
-              padding-right: 44px;
-              padding-top: 15px;
-              padding-bottom: 15px;
-              max-width: 350px;
-            }
-            button, input[type="submit"], input[type="reset"] {
-                /* Remove default styling */
-                background: none;
-                cursor: pointer;
-                border: none;
-                padding: 0;
-                outline: inherit;
-    
-                /* Add custom styling */
-                transition: background-color 0.5s;
+            <style>
+              @font-face {
+                  font-family: "Amaranth";
+                  src: url(./Amaranth/Amaranth-Regular.ttf) format("truetype")
+              }
+              @font-face {
+                  font-family: "Mulish";
+                  src: url(./Mulish/static/Mulish-Regular.ttf) format("truetype")
+              }
+              .hero {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  flex-wrap: wrap;
+                  padding-top: 100px;
+                  padding-bottom: 60px;
+                  background-color: #F0EBCC
+              }
+              .hero-logo-section {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  margin-left: 3.5%;
+                  margin-bottom: 25px;
+              }
+              .logo-image {
+                  width: 350px;
+                  height: auto;
+              }
+              .hero-text-section {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  margin-left: 5%;
+                  margin-right: 5%;
+              }
+              .hero-description {
+                  max-width: 500px;
+                  margin-bottom: 60px;
+              }
+              p.hero-description {
+                  font-size: 30px;
+                  font-family: Amaranth;
+                  font-weight: bold;
+                  color: #3F3697;
+                  text-align: center;
+              }
+              p.hero-os-display {
+                  font-family: "Mulish";
+                  font-size: 20px;
+                  text-align: center;
+                  color: #3D84B8;
+              }
+              .download-button {
+                  font-family: "Mulish";
+                  font-weight: bold;
+                  font-size: 26px;
+                  text-align: center;
+                  letter-spacing: -0.015em;
+                  color: #F0EBCC;
+                  background-color: #344FA1;
+                  border-radius: 5px;
+                  padding-left: 44px;
+                  padding-right: 44px;
+                  padding-top: 15px;
+                  padding-bottom: 15px;
+                  max-width: 350px;
+              }
+              button, input[type="submit"], input[type="reset"] {
+                  /* Remove default styling */
+                  background: none;
+                  cursor: pointer;
+                  border: none;
+                  padding: 0;
+                  outline: inherit;
+        
+                  /* Add custom styling */
+                  transition: background-color 0.5s;
               }
               button:hover {
-                color: #fffbe3;
-                background-color: #5f52d8;
+                  color: #fffbe3;
+                  background-color: #5f52d8;
               }
               button:active {
-                color: #fffbe3;
-                background-color: #5f52d8;
+                  color: #fffbe3;
+                  background-color: #5f52d8;
               }
-          </style>
-  
-          <section class="hero">
+            </style>
+    
+            <section class="hero">
 
-            <section class="hero-logo-section">
-                <img class="logo-image" 
-                    src="./media/JRNLlogo.svg"
-                    alt="JRNL"></img>
+              <section class="hero-logo-section">
+                  <img class="logo-image" 
+                      src="./media/JRNLlogo.svg"
+                      alt="JRNL"></img>
+              </section>
+              <section class="hero-text-section">
+                  <p class="hero-description"></p>
+                  <button class="download-button" type="button">Install JRNL</button>
+                  <p class="hero-os-display"></p>
+              </section>   
+    
             </section>
-            <section class="hero-text-section">
-                <p class="hero-description"></p>
-                <button class="download-button" type="button">Install JRNL</button>
-                <p class="hero-os-display"></p>
-            </section>   
-  
-          </section>
-          `;
-        this.attachShadow({ mode: 'open' })
-        this.shadowRoot.appendChild(template.content.cloneNode(true))
+            `;
+        this.attachShadow({ mode: 'open' });
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
 
         // Get attributes
         const description = this.getAttribute('description');
