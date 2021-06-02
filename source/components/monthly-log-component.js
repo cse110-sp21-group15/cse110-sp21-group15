@@ -107,9 +107,8 @@ class MonthlyLogComponent extends HTMLElement {
             background-color: #5f52d8;
           }
 
-          @media (min-width: 800px) {
+          @media (min-width: 8px) {
             .monthly-log-form-section {
-              margin-top: 3em;
               margin-left: 3em;
             }
           }
