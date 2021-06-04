@@ -46,7 +46,7 @@ class MenuComponent extends HTMLElement {
                         height: 100%;
                         top:0;
                         background-color: #ffffff;
-                        // box-shadow: 2px 0 0 #3d84b8;
+                        // box-shadow: 2px 0 0 #555555;
                         transform: translateX(-101%);
                         transition: transform 0.5s;
                         padding-left: 2.5%;
@@ -67,7 +67,6 @@ class MenuComponent extends HTMLElement {
                         height: 100%;
                         top:0;
                         background-color: #ffffff;
-                        // box-shadow: 2px 0 0 #3d84b8;
                         transform: translateX(-101%);
                         transition: transform 0.5s;
                         padding-left: 2.5rem;
@@ -105,9 +104,9 @@ class MenuComponent extends HTMLElement {
                     font-family: "Amaranth";
                     font-size: 36px;
                     color: #000000;
-                    margin-top: 5rem;
+                    margin-top: 6rem;
                     padding-left: 0;
-                    margin-bottom: 3rem;
+                    margin-bottom: 1rem;
                     max-height: 75%;
                     overflow-y: scroll;
                 }
@@ -191,6 +190,7 @@ class MenuComponent extends HTMLElement {
                     cursor: pointer;
                     border: none;
                     outline: inherit;
+                    cursor: pointer;
                     transition: background-color 0.5s;
                 }
                 .new-collection:hover {
@@ -223,7 +223,6 @@ class MenuComponent extends HTMLElement {
                 <h1 class="menu-title">Collections</h1>
                 <ul class="menu-contents">
                     <li class="future-log"><a>Future Log</a></li>
-                    <li class="custom-log"><a>CSE 110</a></li>
                 </ul>
                 <button class="new-collection" type="button">+ Custom Collection</button>
                 </section>
@@ -248,7 +247,7 @@ class MenuComponent extends HTMLElement {
             if (event.target.closest('#closed') || event.target.closest('#open')) { // open/close hamburger menu
                 toggleMenu();
             }
-            if (event.target.matches('.dropdown-button')) { // open/close dropdown menu
+            else if (event.target.matches('.dropdown-button')) {    // open/close dropdown menu
                 let par = event.target.parentElement;
                 let daily = par.querySelector('.daily-list');
                 if (event.target.parentElement.classList.contains("dropped")) {
@@ -259,6 +258,10 @@ class MenuComponent extends HTMLElement {
                     daily.style.maxHeight = daily.scrollHeight + "px";
                 }
             }
+            else if (event.target.matches('.new-collection')) {     // go to new collection page
+                // TODO: Route to new collection creation page in the SPA
+            }
+            // TODO: Route to respective page upon clicking a collection/log in the menu
         }, false);
 
         // get local date/time to populate the menu
@@ -320,7 +323,81 @@ class MenuComponent extends HTMLElement {
         function daysInMonth(month, year) {
             return new Date(year, month+1, 0).getDate();
         }
+
     }
+    
+    // managing/populating custom collections
+    get collections() { // get all the custom collection representations in an object
+        let customCollections = this.shadowRoot.querySelectorAll('.custom-log a');
+        let collectionsObj = {};
+        let collectionNum = 0;
+
+        customCollections.forEach((entry) => {
+            let entryObj = {
+                'title': entry.innerText,               // name/title of custom collection
+                'state': entry.getAttribute('state')    // state of collection to route to
+                // TODO: Work out routing states for custom collections to finalize object format
+            };
+            collectionsObj["collection-"+collectionNum] = entryObj;
+            collectionNum++;
+        });
+
+        return collectionsObj;
+    }
+        
+    set collections(entries) {  // create all custom collections and add to menu based on the given object 
+        let customCollections = this.shadowRoot.querySelectorAll('.custom-log a');
+        customCollections.forEach((entry) => {  // clear existing collection displays
+            entry.remove();
+        });
+        for (let key in entries) {
+            if (entries.hasOwnProperty(key) && entries[key].hasOwnProperty('title') && entries[key].hasOwnProperty('state')) {  // checks for valid entry objects
+                // add custom collection to the menu
+                let customLog = document.createElement('li');
+                customLog.classList.add("custom-log");
+
+                let customLogTitle = document.createElement('a');
+                customLogTitle.innerHTML = entries[key].title;
+                customLogTitle.setAttribute('state', entries[key].state);
+                
+                customLog.appendChild(customLogTitle);
+                this.shadowRoot.querySelector('.menu-contents').appendChild(customLog);
+            }
+        }
+    }
+
+    /**
+     * JSON Format for custom collections:
+     * 
+     * {
+     *      'collection-0': {
+     *          title: 'CSE 110',
+     *          state: 'CSE 110'     // or whatever string is passed to router.setState route to the CSE 110 collection in the SPA
+     *      },
+     *      'collection-1': {
+     *          title: 'Tutoring',
+     *          state: 'Tutoring'
+     *      },
+     *      ...
+     * }
+     */
+
+    /** 
+     * Add/delete custom collections:
+     * 
+     *  let menu = document.querySelector('menu-component');
+     *  menu.collections = { 'collection-0': { title: 'CSE 1', state: 'CSE 1' } };  // set initial collections
+     *  let tempCollections = menu.collections;
+     * 
+     *  delete tempCollections['collection-0'];
+     *  menu.collections = tempCollections;   // deletes the CSE 1 collection from the menu
+     * 
+     *  menu.collections = { 'collection-3': { title: 'CSE 110', state: 'CSE 110' } };
+     * 
+     *  tempCollections = menu.collections;   // reformats and reorders the collection keys in the object
+     *  newCollections['collection-1'] = { title: 'Tutoring', state: 'Tutoring' };
+     *  menu.collections = newCollections;    // adds the new Tutoring collection to the menu
+     */
 }
 
 customElements.define('menu-component', MenuComponent);
