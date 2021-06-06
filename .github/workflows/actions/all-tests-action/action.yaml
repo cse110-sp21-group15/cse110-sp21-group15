@@ -3,8 +3,8 @@ runs:
   using: "composite"
   steps:
     - name: Install modules
-      run: yarn
+      run: npm install
       shell: bash
     - name: Run tests
-      run: yarn test
+      run: npm test
       shell: bash
