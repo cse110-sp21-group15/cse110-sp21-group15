@@ -57,8 +57,8 @@ class FutureOverviewPage extends HTMLElement {
                     margin-right: 5px;
                 }
 
-                @media (max-width: 1593px) {
-                    .month-row{
+                @media (max-width: 1463px) {
+                    .month-row {
                         flex-direction: column;
                     }
                 }

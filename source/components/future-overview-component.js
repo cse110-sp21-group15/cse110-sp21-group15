@@ -11,6 +11,7 @@ class FutureOverviewComponent extends HTMLElement {
                 font-family: "Amaranth";
                 src: url(./Amaranth/Amaranth-Regular.ttf) format("truetype")
             }
+
             @font-face {
              font-family: "Mulish";
              src: url(./Mulish/static/Mulish-Regular.ttf) format("truetype")
@@ -21,7 +22,6 @@ class FutureOverviewComponent extends HTMLElement {
                flex-direction: row;
                justify-content: center;
                align-items: flex-start;
-               flex-wrap: wrap;
            }
   
            .month-overview-month-text {
@@ -36,6 +36,7 @@ class FutureOverviewComponent extends HTMLElement {
                margin-right: 15px;
                
            }
+
            .month-overview-form-section {
                 display: flex;
                 flex-direction: column;
@@ -100,8 +101,14 @@ class FutureOverviewComponent extends HTMLElement {
             color: #fffbe3;
             background-color: #5f52d8;
           }
+
+          @media (max-width: 1340px) {
+            .month-overview {
+                flex-wrap: wrap;
+            }
+          }
+
         </style>
-        
         <section class="month-overview">
             <section class="month-overview-month-section">
                 <h2 class="month-overview-month-text"></h2>
@@ -129,7 +136,7 @@ class FutureOverviewComponent extends HTMLElement {
         if(month) {
             this.shadowRoot.querySelector('.month-overview-month-text').innerText = month;           
         } else {
-            this.shadowRoot.querySelector('.month-overview-month-text').innerText = 'JAN';
+            this.shadowRoot.querySelector('.month-overview-month-text').innerText = 'Enter Month';
         }
 
     }
