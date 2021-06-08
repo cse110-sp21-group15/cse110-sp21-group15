@@ -22,7 +22,6 @@ class FutureOverviewComponent extends HTMLElement {
                flex-direction: row;
                justify-content: center;
                align-items: flex-start;
-               flex-wrap: wrap;
            }
   
            .month-overview-month-text {
@@ -102,6 +101,13 @@ class FutureOverviewComponent extends HTMLElement {
             color: #fffbe3;
             background-color: #5f52d8;
           }
+
+          @media (max-width: 1340px) {
+            .month-overview {
+                flex-wrap: wrap;
+            }
+          }
+
         </style>
         <section class="month-overview">
             <section class="month-overview-month-section">
