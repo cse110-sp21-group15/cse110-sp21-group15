@@ -11,6 +11,7 @@ class FutureOverviewComponent extends HTMLElement {
                 font-family: "Amaranth";
                 src: url(./Amaranth/Amaranth-Regular.ttf) format("truetype")
             }
+
             @font-face {
              font-family: "Mulish";
              src: url(./Mulish/static/Mulish-Regular.ttf) format("truetype")
@@ -36,6 +37,7 @@ class FutureOverviewComponent extends HTMLElement {
                margin-right: 15px;
                
            }
+
            .month-overview-form-section {
                 display: flex;
                 flex-direction: column;
@@ -101,7 +103,6 @@ class FutureOverviewComponent extends HTMLElement {
             background-color: #5f52d8;
           }
         </style>
-        
         <section class="month-overview">
             <section class="month-overview-month-section">
                 <h2 class="month-overview-month-text"></h2>
@@ -129,7 +130,7 @@ class FutureOverviewComponent extends HTMLElement {
         if(month) {
             this.shadowRoot.querySelector('.month-overview-month-text').innerText = month;           
         } else {
-            this.shadowRoot.querySelector('.month-overview-month-text').innerText = 'JAN';
+            this.shadowRoot.querySelector('.month-overview-month-text').innerText = 'Enter Month';
         }
 
     }
