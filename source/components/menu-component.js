@@ -122,10 +122,10 @@ class MenuComponent extends HTMLElement {
                     cursor: pointer;
                     transition: color 0.5s;
                 }
-                .future-log a, .monthly-log a, .custom-log a {
+                .future-log a, .month-list a, .custom-log a {
                     color: #000000;
                 }
-                .future-log a:hover, .monthly-log a:hover {
+                .future-log a:hover, .month-list a:hover {
                     color: #344FA1;
                 }
                 .custom-log a:hover {
@@ -169,7 +169,11 @@ class MenuComponent extends HTMLElement {
                     font-size: 24px;
                     color: #555555;
                 }
-                .daily-log a:hover {
+                .monthly-log a {
+                    font-size: 24px;
+                    color: #444444;
+                }
+                .daily-log a:hover, .monthly-log a:hover {
                     color: #888888;
                 }
 
@@ -247,14 +251,14 @@ class MenuComponent extends HTMLElement {
             if (event.target.closest('#closed') || event.target.closest('#open')) { // open/close hamburger menu
                 toggleMenu();
             }
-            else if (event.target.matches('.dropdown-button')) {    // open/close dropdown menu
+            else if (event.target.closest('.dropdown-button') || event.target.closest('.dropdown-button + a')) {    // open/close dropdown menu
                 let par = event.target.parentElement;
                 let daily = par.querySelector('.daily-list');
-                if (event.target.parentElement.classList.contains("dropped")) {
-                    event.target.parentElement.classList.remove("dropped");
+                if (par.classList.contains("dropped")) {
+                    par.classList.remove("dropped");
                     daily.style.maxHeight = "0px";
                 } else {
-                    event.target.parentElement.classList.add("dropped");
+                    par.classList.add("dropped");
                     daily.style.maxHeight = daily.scrollHeight + "px";
                 }
             }
@@ -274,21 +278,25 @@ class MenuComponent extends HTMLElement {
         // create the month list with its dropdowns starting from january and ending on the current day in the current month
         for (let i = month; i >= 0; i--) {   // iterate through each month starting from the current month
 
-            let monthLog = document.createElement('li');    // overall list element
-            monthLog.classList.add("monthly-log");
+            let monthList = document.createElement('li');    // overall list element
+            monthList.classList.add("month-list");
 
             let dropButton = document.createElement('button');  // dropdown button
-            monthLog.appendChild(dropButton);
+            monthList.appendChild(dropButton);
             dropButton.outerHTML = "<button class='dropdown-button' type='button'><svg xmlns='http://www.w3.org/2000/svg' height='100%' viewBox='0 0 24 24' width='100%' fill='#000000'>"
                                     + "<path d='M0 0h24v24H0V0z' fill='none'/><path d='M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 "
                                     + "0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z'/></svg></button>";
 
             let monthText = document.createElement('a');    // month text/link
             monthText.innerHTML = months[i];
-            monthLog.appendChild(monthText);
+            monthList.appendChild(monthText);
 
             let dailyList = document.createElement('ul');   // daily log list dropdown
             dailyList.classList.add("daily-list");
+
+            let monthlyLog = document.createElement('li');    // monthly log (top of the dropdown list per month)
+            dailyList.appendChild(monthlyLog);
+            monthlyLog.outerHTML = "<li class='monthly-log'><a>" + months[i] + " Monthly Log</a></li></ul>";
 
             let numDays = daysInMonth(i, year);
 
@@ -300,20 +308,21 @@ class MenuComponent extends HTMLElement {
                     break;
                 }
             }
-            monthLog.appendChild(dailyList);
-            menuList.appendChild(monthLog);
+            monthList.appendChild(dailyList);
+            menuList.appendChild(monthList);
             
             if (i == month) {   // current month = dropdown is active by default
-                monthLog.classList.add("dropped");
+                monthList.classList.add("dropped");
                 dailyList.style.maxHeight = dailyList.scrollHeight + "px";
             }
 
             /* HTML representation:
-            <li class="monthly-log"><button class="dropdown-button" type="button"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 24 24" width="100%" fill="#000000">
+            <li class="month-list"><button class="dropdown-button" type="button"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 24 24" width="100%" fill="#000000">
                 <path d="M0 0h24v24H0V0z" fill="none"/><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 
                 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"/></svg></button>
                 <a>January</a>
                 <ul class="daily-list">
+                    <li class="monthly-log"><a>January Monthly Log</a></li>
                     <li class="daily-log"><a>1/1/2021</a></li>
                 </ul>
             </li>
