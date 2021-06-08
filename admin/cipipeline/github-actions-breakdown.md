@@ -88,7 +88,7 @@ We can now reuse actions!
 > the action in a workflow, we provide route to the directory like so:
 > ./.github/workflows/actions/name-of-action
 
-## Additinonal Notes
+## Additional Notes
 - For each job in a workflow, we must specify which OS it runs on. Our repo will
 be built with Ubuntu so we specify 'runs-on: ubuntu-lastest'. This also means
 that any Composite Run Steps Actions will run on ubuntu-latest.
