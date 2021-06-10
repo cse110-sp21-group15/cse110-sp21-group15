@@ -18,8 +18,8 @@ In order to run the tests: <br />
 
 ## How to write and format tests <br />
 
-For style and to make it easier to understand what you're testing, name your tester file whatever file you are testing, and appending '.test.js', so for example if I have a file 'functions.js', and I wanted to test to make sure everything is working, I would make a file called 'functions.test.js' and put my unit tests here<br />
-Within the 'testing' directory, put all test files you are making into a new directory under the 'testing' directory, naming it whatever feature you are testing, and put all your '.test.js' files in this new directory. This way, you can run all the tests within that directory by running 'npm run test './testing/your_testing_directory''. You just need to give the relative path to the directory, and this will run all tests within this directory. 
+For style and to make it easier to understand what you're testing, name your tester file whatever file (or function) you are testing, and appending '.test.js'. For example, if the file name is 'functions.js', the testing file should be called 'functions.test.js'.<br />
+
 
 You can now start testing, if you had questions on how specifically to test a component of your code check this link out: https://jestjs.io/docs/mock-functions it has some different functions you can use in jest for testing<br />
 
