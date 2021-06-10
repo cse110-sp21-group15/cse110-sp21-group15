@@ -2,6 +2,7 @@
 
 How to run your tests locally <br />
 
+To set up the testing environment, navigate to the cse110-sp21-group15 directory. Run the following commands to initialize npm and install the testing framework Jest and the Puppeteer packages.<br />
 npm init -y <br />
 npm install --save-dev jest babel-jest @babel/core @babel/preset-env <br />
 npm install --save-dev puppeteer jest-puppeteer <br />
