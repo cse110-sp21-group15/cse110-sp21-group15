@@ -2,9 +2,9 @@
 
 How to run your tests locally <br />
 
-npm init -y
-npm install --save-dev jest babel-jest @babel/core @babel/preset-env
-npm install --save-dev puppeteer jest-puppeteer
+npm init -y <br />
+npm install --save-dev jest babel-jest @babel/core @babel/preset-env <br />
+npm install --save-dev puppeteer jest-puppeteer <br />
 <br />
 
 For style and to make it easier to understand what you're testing, name your tester file whatever file you are testing, and appending '.test.js', so for example if I have a file 'functions.js', and I wanted to test to make sure everything is working, I would make a file called 'functions.test.js' and put my unit tests here<br />
