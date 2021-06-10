@@ -1,41 +1,44 @@
 # cse110-sp21-group15
 
-## JRNL
-
-A bullet journal made in CSE 110 at UCSD. 📓  
+We are ORBIS, group 15. This project is a bullet journal made in CSE 110 at UCSD. 📓  
 
 Use this link to access the [landing page](https://jrnl-bujo-app.herokuapp.com/) for our app.
 
 Meet our [team](./admin/team.md)!
 
-*Insert screenshot here*
+### What is JRNL?
 
-### Final Project Video
+JRNL, at its core, is a lightweight, private, digital [bullet journaling](www.bulletjournal.com) app for remote students. It’s designed for students who want to get work done, plan for their future, and reflect on their past. 
 
-### Codebase
+### Who is it for?
 
-The source directory contains the HTML, CSS, and JS files for our landing page and app. Our bullet journal app is written as a PWA, or a progressive web app. 
+Remote college students with extra curriculars
 
-### Logistics
+*Add user story screenshots*
 
-The admin directory holds our [meeting records](./admin/meetings) and [branding](./admin/branding). Also in the admin directory is our mid-quarter [status video](./admin/videos) and our [group contract](./admin/misc). Standups and discussion among each sub-team occurred in Slack. 
+### Why use JRNL? The pillars of our design philosophy
 
-### CI/CD Pipeline 
+We’ve thoughtfully adapted the physical Bullet Journal and its related principles to a digital medium. These are the pillars of our group's design philosophy:
 
-Documentation for the overall pipeline, including how to start using the different parts locally, is [here](./pipeline_instructions_for_devs.md) to instruct new developers on how to use each piece. 
+ - Ease of use
+ - Privacy
+ - Minimizing distractions
+ - Reflection
+ - Habit Tracking
+ - Decluttering the mind
 
-Our testing documentation is [here](./testing/testing.md), in the testing directory.
+ Implementing our bujo app as a PWA makes it so that our users can use the app whether they're online or offline, making it so that they can edit entries quickly and conveniently. Thinking in the context of our user personas, we also thought that habit tracking would be a useful feature to implement. 
 
-We generate documentation and deploy it automatically through JSDocs. You can see the documentation at this [Github Pages link](https://cse110-sp21-group15.github.io/cse110-sp21-group15/).
+ ### Planned features 
 
-If you're interested you can find our group's status reports and pipeline overview videos in the [cipipeline](./admin/cipipeline) directory. 
+ These are the planned features we didn't have time to work on. Unfortunately due to time constraints, early mistakes in delegation, and falling down rabbit holes, we couldn't complete the following features. 
 
-### Design
+  - Habit tracking
+  - Reflection
+  - Certain web components
+  - Making the app downloadable
+  - Persistent data storage (Dexie.JS)
+  - Entering data
 
-The design for our landing page and app are on [Figma](https://www.figma.com/file/fidAnmGA9XGRRAu4ZvUjgL/Bujo-Wireframe?node-id=0%3A1). The final design we chose is on the bottom half of the wireframe, and the upper half is experimental wireframes done by the designers. 
-
-This [mindmap](https://miro.com/welcomeonboard/bU5vaFB1c0cxaHZmSlVXRGM1bmhkMG9leURuRm80UlZldm1kc2lyMUpvVXFtaFZ5RnJJQ3NNblJPTklycVo4V3wzMDc0NDU3MzU3NzIwMTMzMDg0) contains our user personas and stories.
-
-### Sprints
 
 
