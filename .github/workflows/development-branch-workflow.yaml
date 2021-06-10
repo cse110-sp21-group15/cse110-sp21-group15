@@ -1,12 +1,12 @@
-name: Main Branch Action 
+name: Development Branch Action
 
 on:
   push:
     branches:
-      - main
+      - development
   pull_request:
     branches:
-      - main
+      - development
 
 jobs:
 
@@ -16,7 +16,7 @@ jobs:
       steps:
         - uses: actions/checkout@v2
           with:
-            ref: main
+            ref: development
         - name: Run linter on new code
           uses: ./.github/workflows/actions/lint-action
 
@@ -26,7 +26,7 @@ jobs:
       steps:
         - uses: actions/checkout@v2
           with:
-            ref: main
+            ref: development
         - name: Run full suite of tests on new code
           uses: ./.github/workflows/actions/all-tests-action
 
@@ -36,7 +36,7 @@ jobs:
       steps:
         - uses: actions/checkout@v2
           with:
-            ref: main
+            ref: development
         - name: Run automatic doc generation
           uses: andstor/jsdoc-action@v1
           with:
