@@ -14,7 +14,7 @@ In order to run the tests: <br />
 
 1. Open index.html using VSCode and go live using the Live Server extension.
 2. To run every test, run the command: <br /> 'npm test'
-3. To run a specific test, run the command <br /> 'npm test source/__test__/<path to .test.js file>'
+3. To run a specific test, run the command <br /> 'npm test source/\_\_test\_\_/<path to .test.js file>'
 
 ## How to write and format tests <br />
 
