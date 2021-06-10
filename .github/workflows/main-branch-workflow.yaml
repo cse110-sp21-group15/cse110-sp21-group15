@@ -5,7 +5,6 @@ on: [push, pull_request]
 jobs:
 
 # TODO: Make jobs dependent on each other
-# TODO: Change ref to main after testing
 
     lint:
       name: lint-job
@@ -39,7 +38,7 @@ jobs:
         - name: Run automatic doc generation
           uses: andstor/jsdoc-action@v1
           with:
-            source_dir: ./pipeline
+            source_dir: ./source
             recurse: true
             output_dir: ./docs
             config_file: jsdocs.config.json
