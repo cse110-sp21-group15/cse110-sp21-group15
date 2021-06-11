@@ -1,0 +1,72 @@
+{
+  "name": "cse110-sp21-group15",
+  "version": "1.0.0",
+  "description": "A bullet journal made in CSE 110 at UCSD. 📓   Meet our [team](./admin/team.md)!",
+  "main": "index.js",
+  "dependencies": {
+    "agent-base": "^6.0.2",
+    "debug": "^4.3.1",
+    "expand-tilde": "^1.2.2",
+    "find-up": "^4.1.0",
+    "homedir-polyfill": "^1.0.3",
+    "is-number": "^7.0.0",
+    "is-extendable": "^0.1.1",
+    "isexe": "^2.0.0",
+    "isobject": "^3.0.1",
+    "is-windows": "^0.2.0",
+    "joi": "^17.4.0",
+    "js-tokens": "^4.0.0",
+    "kleur": "^3.0.3",
+    "locate-path": "^5.0.0",
+    "is-plain-object": "^2.0.4",
+    "minimatch": "^3.0.4",
+    "ms": "^2.1.2",
+    "mkdirp": "^0.5.5",
+    "minimist": "^1.2.5",
+    "mixin-object": "^2.0.1",
+    "kind-of": "^3.2.2",
+    "p-limit": "^2.3.0",
+    "os-homedir": "^1.0.2",
+    "p-try": "^2.2.0",
+    "path-exists": "^4.0.0",
+    "parse-passwd": "^1.0.0",
+    "lazy-cache": "^1.0.4",
+    "lodash": "^4.17.21",
+    "p-locate": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "babel-jest": "^27.0.2",
+    "jest": "^27.0.4",
+    "jest-puppeteer": "^5.0.4",
+    "puppeteer": "^10.0.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cse110-sp21-group15/cse110-sp21-group15.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cse110-sp21-group15/cse110-sp21-group15/issues"
+  },
+  "homepage": "https://github.com/cse110-sp21-group15/cse110-sp21-group15#readme",
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.2",
+    "jest": "^26.6.3",
+    "jsdoc": "^3.6.7"
+  },
+  "dependencies": {},
+  "jest": {
+    "preset": "jest-puppeteer",
+    "verbose": true
+  }
+}

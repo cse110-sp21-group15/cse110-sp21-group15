@@ -1,0 +1,9 @@
+# Directories and files for ESLint to ignore
+**/*.test.js
+README.md
+admin/*
+specs/*
+main.yml
+package-lock.json
+package.json
+docs/*

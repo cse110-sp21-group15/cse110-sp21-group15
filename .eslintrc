@@ -1,0 +1,16 @@
+{
+    "env": {
+        "node": true
+    },
+    "extends": [
+        "airbnb-base"
+    ],
+    "parser": "babel-eslint",           // workaround for default parser working incorrectly
+    "parserOptions": {                  // specify javascript language options (ex: modules)
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "rules": {
+                                        // "quotes": ["warn", "double"] - example of a rule
+    }
+}
