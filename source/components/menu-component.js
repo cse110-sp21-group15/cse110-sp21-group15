@@ -15,6 +15,18 @@ class MenuComponent extends HTMLElement {
                     src: url(./Mulish/static/Mulish-Regular.ttf) format("truetype")
                 }
 
+                ::-webkit-scrollbar {
+                    width: 7px;
+                }
+                ::-webkit-scrollbar-track {
+                    background: #DDDDDD; 
+                    border-radius: 7px;
+                }
+                ::-webkit-scrollbar-thumb {
+                    background: #3d84b8; 
+                    border-radius: 7px;
+                }
+
                 .hamburger-button {
                     /* Remove default styling */
                     background: none;
