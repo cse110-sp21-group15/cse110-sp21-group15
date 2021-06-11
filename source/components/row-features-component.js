@@ -86,20 +86,28 @@ class RowFeaturesComponent extends HTMLElement {
             <div class="row">
                 <feature-component alignment=vertical
                                 textSize=mini
+                                title="Privacy First"
+                                description="Our team at JRNL values your privacy, and for this reason, we are a locally-hosted web application that will only be accessible to you. Privacy for the win!"
                                 imgSize=mini
-                                src="media/rapid-logging-example.png"></feature-component>
+                                src="media/privacy-first.png"></feature-component>
                 <feature-component alignment=vertical
                                 textSize=mini
+                                title="Remove Distractions"
+                                description="When you use JRNL, you will be met with a minimal, attractive, focused interface that will allow you to tune into your thoughts and jot them down as they bubble up in your mind"
                                 imgSize=mini
-                                src="media/rapid-logging-example.png"></feature-component>
+                                src="media/remove-distractions.png"></feature-component>
                 <feature-component alignment=vertical
                                 textSize=mini
+                                title="Track Habits"
+                                description="We understand that you have habits to track, be they good habits to continue or bad habits to break. JRNL will help you track these habits in an intuitive, enjoyable manner"
                                 imgSize=mini
-                                src="media/rapid-logging-example.png"></feature-component>
+                                src="media/track-habits.png"></feature-component>
                 <feature-component alignment=vertical
                                 textSize=mini
+                                title="Plan and Reflect"
+                                description="Through JRNL's retrospective and future logs, you will reflect on the past and plan for the future in the best way possible"
                                 imgSize=mini
-                                src="media/rapid-logging-example.png"></feature-component>
+                                src="media/reflect.png"></feature-component>
             </div>
             <div class="align-button">
                 <button class="start-jrnling-button" type="button">More Features</button>

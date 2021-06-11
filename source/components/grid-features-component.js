@@ -42,25 +42,33 @@ class GridFeaturesComponent extends HTMLElement {
             <div class="row">
               <feature-component imgSize=mini
                                  textSize=mini
+                                 title="Write and Sort Thoughts Quickly"
+                                 description="Capture your thoughts as they spring up throughout the day"
                                  id=top-left
-                                 src="media/rapid-logging-example.png">
+                                 src="media/sort-thoughts.png">
               </feature-component>
               <feature-component imgSize=mini
                                  textSize=mini
+                                 title="Identify your priorities"
+                                 description="Mark the most important items in your JRNL with unique bullet signifiers"
                                  id=top-right
-                                 src="media/rapid-logging-example.png">
+                                 src="media/identify-priorities.png">
               </feature-component>
             </div>
             <div class="row">
               <feature-component imgSize=mini
                                  textSize=mini
+                                 title="Track Short and Long Term Goals"
+                                 description="Manifest your goals like never before. From writing bullets on the page to changing your life for the better, JRNL will help you get there"
                                  id=bottom-left
-                                 src="media/rapid-logging-example.png">
+                                 src="media/track-goals.png">
               </feature-component>
               <feature-component imgSize=mini
                                  textSize=mini
+                                 title="Make the Journal Yours"
+                                 description="JRNL is a framework for reflection, ideation, logging, and so much more. Configure your JRNL experience to match your lifestyle."
                                  id=bottom-right
-                                 src="media/rapid-logging-example.png">
+                                 src="media/custom-logs.png">
               </feature-component>
             </div>
           </section>
