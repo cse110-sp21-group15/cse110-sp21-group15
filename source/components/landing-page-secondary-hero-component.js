@@ -118,7 +118,7 @@ class LandingPageSecondaryHeroComponent extends HTMLElement {
       if(title) {
         this.shadowRoot.querySelector('h1').innerText = title;
       } else {
-        this.shadowRoot.querySelector('h1').innerText = "Enter Title"
+        this.shadowRoot.querySelector('h1').innerText = "Enter Title";
       }
       if(description) {
           this.shadowRoot.querySelector('h1').insertAdjacentHTML('afterend',

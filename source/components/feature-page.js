@@ -89,17 +89,17 @@ class FeaturePage extends HTMLElement {
             </header>
             <main>
             <feature-component title="Rapid Logging"
-                               description=""
-                               src="./media/rapid-logging-example.png"></feature-component>
+                               description="JRNL allows you to rapid log your thoughts with ease as they float into your mind. The concept of rapid logging is fundamental to how you bullet journal, and JRNL has encapsulated this experience into something you'll love"
+                               src="./media/sort-thoughts.png"></feature-component>
             <feature-component title="Migration"
-                               description=""
-                               src="./media/migration-example.png"
+                               description="To help facilitate forward progress with your tasks, JRNL allows you to reflect on the past month's tasks at the beginning of each month and migrate your tasks to the current month based on whether you need to complete them moving forward or not"
+                               src="./media/migration.png"
                                alternateBackgroundColor=true
                                alignment="right"></feature-component>
             <feature-component title="Custom Collections"
-                               description=""
-                               src="./media/custom-collection-example.png"></feature-component>
-            <h5 class="button-description">Lorum ipsam voluptatem quia voluptas sit aspernatur</h5>
+                               description="Through Custom Collections, JRNL will allow you to modularize your Bullet Journaling experience so that it fits your specific needs in the best way possible"
+                               src="./media/custom-collections.png"></feature-component>
+            <h5 class="button-description">Ready to JRNL?</h5>
             <div class="align-button">
                 <button class="start-jrnling-button" type="button">Start JRNLing</button>
             </div>
