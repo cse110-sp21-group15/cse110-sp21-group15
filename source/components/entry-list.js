@@ -158,12 +158,6 @@ class EntryList extends HTMLElement {
         </style>
         <section class="entry-handler">
             <section class="entries">
-                <section class='single-entry'>
-                    <input type='date' class='date-picker' min='2021-06-01' max='2021-06-30' value='2021-06-11'>
-                    <button class='bullet' type='button'><svg width='100%' height='100%' viewBox='0 0 157 84' xmlns='http://www.w3.org/2000/svg'>"
-                    <image class='task' href='./media/task-bullet.svg' width='100%' height='100%'/></svg></button>
-                    <span><input type='text' maxlength='32' class='entry-text' value='yo yo yo'></span>
-                </section>
             </section>
             <button class="new-entry" type="button">+ Add</button>
         </section>
