@@ -3,7 +3,9 @@ runs:
   using: "composite"
   steps:
     - name: Install modules
-      run: npm install
+      run: npm init -y
+      run: npm install --save-dev jest babel-jest @babel/core @babel/preset-env
+      run: npm install --save-dev puppeteer jest-puppeteer
       shell: bash
     - name: Run tests
       run: npm test
