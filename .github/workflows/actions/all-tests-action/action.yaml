@@ -1,0 +1,10 @@
+name: test-action
+runs:
+  using: "composite"
+  steps:
+    - name: Install modules
+      run: npm install
+      shell: bash
+    - name: Run tests
+      run: npm test
+      shell: bash
