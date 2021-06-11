@@ -14,7 +14,6 @@ class MenuComponent extends HTMLElement {
                     font-family: "Mulish";
                     src: url(./Mulish/static/Mulish-Regular.ttf) format("truetype")
                 }
-
                 ::-webkit-scrollbar {
                     width: 7px;
                 }
@@ -26,7 +25,6 @@ class MenuComponent extends HTMLElement {
                     background: #3d84b8; 
                     border-radius: 7px;
                 }
-
                 .hamburger-button {
                     /* Remove default styling */
                     background: none;

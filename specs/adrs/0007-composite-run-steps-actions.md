@@ -1,4 +1,4 @@
-# Branching Strategy
+# Composite Run Step Actions
 
 * Status: accepted
 * Deciders: Rahul Dadlani, Emily Jewik, Zain Khan
