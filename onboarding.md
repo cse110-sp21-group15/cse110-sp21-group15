@@ -59,7 +59,11 @@ The code for `JRNL` is split over two directories:
 
 - `src/website` contains all the code for the landing page site of our app.
 
-After you have made your changes, you need to write unit tests and end-to-end tests using `Jest` and `Jest-Puppeteer` respectively. You can add these tests into `src/app/__tests__/feature-tests/` and `src/website/__tests__/feature-tests/`. Learn more about how to write tests using the `testing.md` document [here](testing/testing.md).
+After you have made your changes, you need to write unit tests and end-to-end
+tests using `Jest` and `Jest-Puppeteer` respectively. You can add these tests
+into `src/app/__tests__/feature-tests/` and
+`src/website/__tests__/feature-tests/`. Learn more about how to write tests
+using the `testing.md` document [here](source/docs/testing.md).
 
 If you think they are ready to be get pushed to production, you can first create a Pull Request (PR) from your feature branch into `development` via Github.
 

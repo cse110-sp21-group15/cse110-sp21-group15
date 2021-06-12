@@ -27,12 +27,6 @@ Git hooks are not tracked by git and are local in the .git/hooks directory by de
 
 Each contributor must run the command 'git config --local core.hooksPath .githooks' in the root directory to change their default git hooks directory to this new .githooks directory under version control. To test that this works, make any edit to a .js file and commit. The script should run. Then, erase the test commit with 'git reset --soft HEAD^' to revert one commit back. 
 
-## Testing
-
-We are using Jest for all testing in our project
-Testing is implemented using GitHub Actions as well, so upon pushing to the main branch, all unit testing will be ran, and you can only successfully push to main if all unit tests are passed successfully. Unit tests can also be made and tested before pushing for any tests needed.
-All info about how specifically to test locally are in the testing.md file in the testing directory
-
 ## Automatic Doc Generation
 
 We are using JSDocs for our automatic doc generation. Using github actions, a command will be run for JSDocs that will generate html files that will document the .js files in our source directory. The files are deployed to Github Pages on the gh-pages branch of our repository on push and pull request. The static site is deployed to this [link](https://cse110-sp21-group15.github.io/cse110-sp21-group15/)
