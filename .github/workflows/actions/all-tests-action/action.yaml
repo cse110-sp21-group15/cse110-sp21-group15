@@ -4,7 +4,11 @@ runs:
   steps:
     - name: Install modules
       run: npm init -y
+      shell: bash
+    - name: Install jest
       run: npm install --save-dev jest babel-jest @babel/core @babel/preset-env
+      shell: bash
+    - name: Install jest-puppeteer
       run: npm install --save-dev puppeteer jest-puppeteer
       shell: bash
     - name: Run tests
