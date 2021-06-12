@@ -278,7 +278,7 @@ class EntryList extends HTMLElement {
      * @param {number} day day of the entry
      * @param {number} year year of the entry
      * @param {string} type the type of bullet of the entry, defaults to task
-     * @returns
+     * @returns {number}
      */
   newEntry(txt, showDate, month, day, year, type) {
     const entriesSection = this.shadowRoot.querySelector('.entries');
