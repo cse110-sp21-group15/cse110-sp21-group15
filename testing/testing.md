@@ -20,7 +20,6 @@ In order to run the tests: <br />
 
 For style and to make it easier to understand what you're testing, name your tester file whatever file (or function) you are testing, and appending '.test.js'. For example, if the file name is 'functions.js', the testing file should be called 'functions.test.js'.<br />
 
-
 You can now start testing, if you had questions on how specifically to test a component of your code check this link out: https://jestjs.io/docs/mock-functions it has some different functions you can use in jest for testing<br />
 
 After you make any tests you need for a specific test.js file, to run these tests, using 'npm run test test_file.test.js'<br />
