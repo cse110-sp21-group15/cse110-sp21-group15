@@ -1,6 +1,19 @@
 // script.js
 import { router } from './app-router.js';
 
+// Make sure you register your service worker here too
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('sw.js', { scope: '/app/' }).then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+
 // const homeButton = document.getElementById('home-button');
 // const logoButton = document.querySelector('nav > button');
 // const featuresButton = document.getElementById('features-button');
