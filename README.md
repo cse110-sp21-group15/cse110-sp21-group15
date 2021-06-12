@@ -5,6 +5,7 @@ We are ORBIS, group 15. This project is a bullet journal made in CSE 110 at UCSD
 Use this link to access the [landing page](https://jrnl-site.netlify.app/) for our app.
 
 Meet our [team](./admin/team.md)!
+
 If you're new to the team, check out our [onboarding docs](./onboarding.md)
 
 ### What is JRNL?
@@ -14,7 +15,9 @@ JRNL, at its core, is a lightweight, private, digital [bullet journaling](https:
 ### Who is it for?
 
 Remote college students with extra curriculars
+
 ![image](https://user-images.githubusercontent.com/44106252/121780201-226a1100-cb54-11eb-87ff-f83a998935c8.png)
+
 ### Why use JRNL? The pillars of our design philosophy
 
 We’ve thoughtfully adapted the physical Bullet Journal and its related principles to a digital medium. These are the pillars of our group's design philosophy:

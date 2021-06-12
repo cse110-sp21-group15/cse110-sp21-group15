@@ -34,5 +34,4 @@ We are using JSDocs for our automatic doc generation. Using github actions, a co
 Visual Studio Code can automatically generate JSDoc comments for methods if you type '/**' above a given method or constructor. Code must be commented in JSDoc format in order for the html files to be automatically generated. [This](https://jsdoc.app/about-getting-started.html) is some basic documentation on how to write JSDoc style comments. There are more examples in the source directory. 
 
 ## Deployment
-
 The landing page for JRNL is deployed through Netlify. [This](https://jrnl-site.netlify.app/) is the link to our deployed page. Netlify automatically deploys the landing page when code is pushed to the main branch. 
