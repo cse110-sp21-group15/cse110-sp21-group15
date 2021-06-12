@@ -4,7 +4,7 @@ import { router } from './app-router.js';
 // Make sure you register your service worker here too
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('sw.js', { scope: '/app/' }).then(function(registration) {
+    navigator.serviceWorker.register('sw.js', { scope: '/' }).then(function(registration) {
       // Registration was successful
       console.log('ServiceWorker registration successful with scope: ', registration.scope);
     }, function(err) {
