@@ -9,7 +9,7 @@ If you're new to the team, check out our [onboarding docs](./onboarding.md)
 
 ### What is JRNL?
 
-JRNL, at its core, is a lightweight, private, digital [bullet journaling](www.bulletjournal.com) app for remote students. It’s designed for students who want to get work done, plan for their future, and reflect on their past. 
+JRNL, at its core, is a lightweight, private, digital [bullet journaling](https://bulletjournal.com/) app for remote students. It’s designed for students who want to get work done, plan for their future, and reflect on their past. 
 
 ### Who is it for?
 
