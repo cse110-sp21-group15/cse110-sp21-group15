@@ -5,7 +5,7 @@ We are ORBIS, group 15. This project is a bullet journal made in CSE 110 at UCSD
 Use this link to access the [landing page](https://jrnl-site.netlify.app/) for our app.
 
 Meet our [team](./admin/team.md)!
-If you're new to the team, check out our [onboarding docs](./onboarding.docs)
+If you're new to the team, check out our [onboarding docs](./onboarding.md)
 
 ### What is JRNL?
 
