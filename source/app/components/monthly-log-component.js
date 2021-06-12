@@ -148,7 +148,7 @@ class MonthlyLogComponent extends HTMLElement {
     if (title) {
       this.shadowRoot.querySelector('.monthly-log-title-text').innerText = title;
     } else {
-      this.shadowRoot.querySelector('.monthly-log-title-text').innerText = "Viv's January";
+      this.shadowRoot.querySelector('.monthly-log-title-text').innerText = "Viv's December";
     }
 
     if (month) {
