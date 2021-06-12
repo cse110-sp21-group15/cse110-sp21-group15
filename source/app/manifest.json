@@ -1,0 +1,14 @@
+{
+  "name": "JRNL",
+  "short_name": "JRNL",
+  "start_url": ".",
+  "display": "fullscreen",
+  "background_color": "#fff",
+  "description": "A digital bullet journaling app for students.",
+  "icons": [{
+    "src": "media/JRNLfavicon.png",
+    "sizes": "403x403",
+    "type": "image/png",
+    "purpose": "any"
+    }]
+}

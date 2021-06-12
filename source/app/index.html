@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JRNL</title>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="./media/JRNLfavicon.svg">
+
+  <!-- Manifest for PWA -->
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+  <header>
+    <menu-component></menu-component>
+  </header>
+
+  <main class="main">
+      <future-overview-page></future-overview-page>
+  </main>
+
+  <!-- Page Scripts -->
+  <script src="./components/future-overview-page.js" type="module"></script>
+
+  <!-- Component Scripts -->
+  <script src="./components/menu-component.js" type="module"></script>
+  <script src="./components/monthly-log-component.js" type="module"></script>
+  <script src="./components/future-overview-component.js" type="module"></script>
+  <script src="./components/entry-list.js" type="module"></script>
+  <script src="./components/daily-log-component.js" type="module"></script>
+
+ 
+  <footer>
+  </footer>
+
+  <!-- Router Script -->
+  <script src="./scripts/app-router.js" type="module"></script>
+
+  <!-- Main Script -->
+  <script src="./scripts/app-script.js" type="module"></script>
+  
+  <!-- Main Script -->
+  <script src="./sw.js" type="module"></script>
+</body>
+
+</html>
