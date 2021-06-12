@@ -14,7 +14,7 @@ JRNL, at its core, is a lightweight, private, digital [bullet journaling](https:
 
 ### Who is it for?
 
-Remote college students with extra curriculars
+Remote college students with extra curriculars.
 
 ![image](https://user-images.githubusercontent.com/44106252/121780201-226a1100-cb54-11eb-87ff-f83a998935c8.png)
 
