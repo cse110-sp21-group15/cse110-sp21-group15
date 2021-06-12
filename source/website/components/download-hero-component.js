@@ -104,7 +104,8 @@ class DownloadHeroComponent extends HTMLElement {
             </section>
             <section class="hero-text-section">
                 <p class="hero-description"></p>
-                <button class="download-button" type="button">Install JRNL</button>
+                <button class="download-button" type="button"
+                onclick="window.open('https://jrnl-app.netlify.app/')">Install JRNL</button>
                 <p class="hero-os-display"></p>
             </section>   
   
