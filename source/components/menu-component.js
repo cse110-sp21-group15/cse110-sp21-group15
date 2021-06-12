@@ -391,7 +391,7 @@ class MenuComponent extends HTMLElement {
      * {
      *      'collection-0': {
      *          title: 'CSE 110',
-     *          state: 'CSE 110'     // or whatever string is passed to router.setState route to the CSE 110 collection in the SPA
+     *          state: 'CSE-110'     // or whatever string is passed to router.setState route to the CSE 110 collection in the SPA
      *      },
      *      'collection-1': {
      *          title: 'Tutoring',
@@ -414,8 +414,8 @@ class MenuComponent extends HTMLElement {
      *  menu.collections = { 'collection-3': { title: 'CSE 110', state: 'CSE 110' } };
      * 
      *  tempCollections = menu.collections;   // reformats and reorders the collection keys in the object
-     *  newCollections['collection-1'] = { title: 'Tutoring', state: 'Tutoring' };
-     *  menu.collections = newCollections;    // adds the new Tutoring collection to the menu
+     *  tempCollections['collection-1'] = { title: 'Tutoring', state: 'Tutoring' };
+     *  menu.collections = tempCollections;    // adds the new Tutoring collection to the menu
      */
 }
 
