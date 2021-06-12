@@ -1,0 +1,31 @@
+name: Development Branch Action
+
+on:
+  push:
+    branches:
+      - development
+  pull_request:
+    branches:
+      - development
+
+jobs:
+
+    lint:
+      name: lint-job
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+          with:
+            ref: development
+        - name: Run linter on new code
+          uses: ./.github/workflows/actions/lint-action
+
+    test:
+      name: test-job
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+          with:
+            ref: development
+        - name: Run full suite of tests on new code
+          uses: ./.github/workflows/actions/all-tests-action

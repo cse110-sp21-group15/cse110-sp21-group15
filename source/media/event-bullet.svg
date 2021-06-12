@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="200mm"
+   height="200mm"
+   viewBox="0 0 200 200"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="event-bullet.svg"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="235.80344"
+     inkscape:cy="453.87473"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1742"
+     inkscape:window-height="1080"
+     inkscape:window-x="2194"
+     inkscape:window-y="102"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(17.223213,0.59226227)">
+    <path
+       id="path900"
+       style="fill:#000000;fill-opacity:1;stroke-width:0.790809"
+       d="M 377.95312 188.97656 A 188.97638 188.97638 0 0 0 188.97656 377.95312 A 188.97638 188.97638 0 0 0 377.95312 566.92969 A 188.97638 188.97638 0 0 0 566.92969 377.95312 A 188.97638 188.97638 0 0 0 377.95312 188.97656 z M 377.77344 270.97656 A 106.97641 106.97641 0 0 1 377.93359 270.97656 A 106.97641 106.97641 0 0 1 377.95312 270.97656 A 106.97641 106.97641 0 0 1 484.92969 377.95312 A 106.97641 106.97641 0 0 1 377.95312 484.92969 A 106.97641 106.97641 0 0 1 270.97656 377.95312 A 106.97641 106.97641 0 0 1 377.77344 270.97656 z "
+       transform="matrix(0.26458333,0,0,0.26458333,-17.223213,-0.59226227)" />
+  </g>
+</svg>
