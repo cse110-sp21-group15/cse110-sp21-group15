@@ -34,7 +34,4 @@ We are using JSDocs for our automatic doc generation. Using github actions, a co
 Visual Studio Code can automatically generate JSDoc comments for methods if you type '/**' above a given method or constructor. Code must be commented in JSDoc format in order for the html files to be automatically generated. [This](https://jsdoc.app/about-getting-started.html) is some basic documentation on how to write JSDoc style comments. There are more examples in the source directory. 
 
 ## Deployment
-
-The landing page for JRNL is deployed through Heroku. [This](https://jrnl-bujo-app.herokuapp.com/) is the link to our deployed page. Heroku automatically deploys the landing page when code is pushed to the main branch. 
-
-Unfortunately Heroku doesn't deploy static sites out of the box, so a workaround had to be implemented. index.php and composer.json in the root directory are dummy files that simulate a backend. Do not modify these - they serve no purpose other than to allow us to deploy the landing page on Heroku.
+The landing page for JRNL is deployed through Netlify. [This](https://jrnl-site.netlify.app/) is the link to our deployed page. Netlify automatically deploys the landing page when code is pushed to the main branch. 

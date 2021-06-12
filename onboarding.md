@@ -72,7 +72,7 @@ If you think they are ready to be get pushed to production, you can first create
 
 ### CI/CD Pipeline 
 
-Documentation for the overall pipeline, including how to start using the different parts locally, is [here](./pipeline_instructions_for_devs.md) to instruct new developers on how to use each piece. 
+Documentation for the overall pipeline, including how to start using the different parts locally, is [here](./source/docs/pipeline_instructions_for_devs.md) to instruct new developers on how to use each piece. 
 
 Our testing documentation is [here](./testing/testing.md), in the testing directory.
 
@@ -132,7 +132,7 @@ If you're interested you can find our group's status reports and pipeline overvi
   - GitFlow
     - Our group used GitFlow for our branching strategy. While we didn&#39;t follow the branching strategy from this diagram exactly, we created main, develop, and feature branches and placed branch protections on our main and develop branches. In order to create a pull request, we required two approving reviews on our main branch and one approving review on our development branch. Additionally, we also used special staging branches for changes related to the pipeline. The purpose of using GitFlow was to ensure that our app is fully functional before pushing to production, and using feature branches made it easier for developers to work in parallel.
   - Netlify, JSDocs, ESLint
-    - [Link to Pipeline](pipeline_instructions_for_devs.md)
+    - [Link to Pipeline](./source/docs/pipeline_instructions_for_devs.md)
   - Jest
     - Allowed us to easily test our code and components of our application, and everyone was familiar with the tool since we had used it in the lab
 
