@@ -11,6 +11,17 @@
         "sourceType": "module"
     },
     "rules": {
-                                        // "quotes": ["warn", "double"] - example of a rule
+        "no-undef": "off",
+        "eqeqeq": "off",
+        "import/extensions": "off",
+        "no-restricted-globals": "off",
+        "no-plusplus": "off",
+        "max-len": "off",
+        "no-use-before-define": "off",
+        "no-prototype-builtins": "off",
+        "no-unused-expressions": "off",
+        "no-shadow": "off",
+        "no-restricted-syntax": "off",
+        "no-unused-vars": "off"
     }
 }
