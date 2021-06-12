@@ -1,10 +1,12 @@
+// eslint-disable-next-line no-undef
 class LargeFeaturesComponent extends HTMLElement {
-    constructor() {
-      super();
-  
-      const template = document.createElement('template');
-  
-      template.innerHTML = `
+  constructor() {
+    super();
+
+    // eslint-disable-next-line no-undef
+    const template = document.createElement('template');
+
+    template.innerHTML = `
           <style>
           </style>
           <section class="">
@@ -41,8 +43,9 @@ class LargeFeaturesComponent extends HTMLElement {
                                    imgSize=mini
                                    src="media/rapid-logging-example.png"></feature-component>
           `;
-      this.attachShadow({ mode: 'open' });
-      this.shadowRoot.appendChild(template.content.cloneNode(true));
-    }
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
+  }
 }
+// eslint-disable-next-line no-undef
 customElements.define('large-features-component', LargeFeaturesComponent);

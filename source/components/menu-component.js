@@ -1,10 +1,22 @@
+/* eslint-disable no-loop-func */
+/* eslint-disable no-console */
+/* eslint-disable no-unused-vars */
+/* eslint-disable import/extensions */
+import { router } from '../scripts/app-router.js';
+
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-prototype-builtins */
+/* eslint-disable no-plusplus */
+/* eslint-disable eqeqeq */
+/* eslint-disable no-undef */
+/* eslint-disable max-len */
 class MenuComponent extends HTMLElement {
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        const template = document.createElement('template');
+    const template = document.createElement('template');
 
-        template.innerHTML = `
+    template.innerHTML = `
             <style>
                 @font-face {
                     font-family: "Amaranth";
@@ -242,93 +254,106 @@ class MenuComponent extends HTMLElement {
                 </section>
             </section>
             `;
-        this.attachShadow({ mode: 'open' })
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
 
-        const menu = this.shadowRoot.querySelector('.menu-window');
-        const menuList = this.shadowRoot.querySelector('.menu-contents');
+    const menu = this.shadowRoot.querySelector('.menu-window');
+    const menuList = this.shadowRoot.querySelector('.menu-contents');
 
-        function toggleMenu() {
-            if (menu.classList.contains("showMenu")) {
-                menu.classList.remove("showMenu");
-              } else {
-                menu.classList.add("showMenu");
-            }
+    function toggleMenu() {
+      if (menu.classList.contains('showMenu')) {
+        menu.classList.remove('showMenu');
+      } else {
+        menu.classList.add('showMenu');
+      }
+    }
+
+    // click listeners
+    this.shadowRoot.addEventListener('click', (event) => {
+      if (event.target.closest('#closed') || event.target.closest('#open')) { // open/close hamburger menu
+        toggleMenu();
+      } else if (event.target.closest('.dropdown-button') || event.target.closest('.dropdown-button + a')) { // open/close dropdown menu
+        const par = event.target.parentElement;
+        const daily = par.querySelector('.daily-list');
+        if (par.classList.contains('dropped')) {
+          par.classList.remove('dropped');
+          daily.style.maxHeight = '0px';
+        } else {
+          par.classList.add('dropped');
+          daily.style.maxHeight = `${daily.scrollHeight}px`;
         }
+      } else if (event.target.matches('.new-collection')) { // go to new collection page
+        // TODO: Route to new collection creation page in the SPA
+      }
+      // TODO: Route to respective page upon clicking a collection/log in the menu
+      console.log('CLICK LISTENERS');
+    //   console.log(event.target.closest('.daily-log'));
+    // console.log(event.target.closest('.daily-log > a'));
+    console.log(event.target.closest('a'));
+      if(event.target.closest('.daily-log > a')) {
+        window.scroll(0, 0);
+        router.setState(`daily-log;${event.path[1].innerText}`, false);
+      } else if (event.target.closest('.monthly-log > a')) {
+        window.scroll(0, 0);
+        router.setState('monthly-log', false);
+      } else if (event.target.closest('.future-log > a')) {
+        window.scroll(0, 0);
+        router.setState('future-log', false);
+      }
+    }, false);
 
-        // click listeners
-        this.shadowRoot.addEventListener('click', event => {
-            if (event.target.closest('#closed') || event.target.closest('#open')) { // open/close hamburger menu
-                toggleMenu();
-            }
-            else if (event.target.closest('.dropdown-button') || event.target.closest('.dropdown-button + a')) {    // open/close dropdown menu
-                let par = event.target.parentElement;
-                let daily = par.querySelector('.daily-list');
-                if (par.classList.contains("dropped")) {
-                    par.classList.remove("dropped");
-                    daily.style.maxHeight = "0px";
-                } else {
-                    par.classList.add("dropped");
-                    daily.style.maxHeight = daily.scrollHeight + "px";
-                }
-            }
-            else if (event.target.matches('.new-collection')) {     // go to new collection page
-                // TODO: Route to new collection creation page in the SPA
-            }
-            // TODO: Route to respective page upon clicking a collection/log in the menu
-        }, false);
+    // get local date/time to populate the menu
+    const dateObj = new Date();
+    const month = dateObj.getMonth(); // january = 0, ..., december = 11
+    const day = dateObj.getDate();
+    const year = dateObj.getFullYear();
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-        // get local date/time to populate the menu
-        const dateObj = new Date();
-        const month = dateObj.getMonth(); // january = 0, ..., december = 11
-        const day = dateObj.getDate();
-        const year = dateObj.getFullYear();
-        const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    // create the month list with its dropdowns starting from january and ending on the current day in the current month
+    for (let i = month; i >= 0; i--) { // iterate through each month starting from the current month
+      const monthList = document.createElement('li'); // overall list element
+      monthList.classList.add('month-list');
 
-        // create the month list with its dropdowns starting from january and ending on the current day in the current month
-        for (let i = month; i >= 0; i--) {   // iterate through each month starting from the current month
-
-            let monthList = document.createElement('li');    // overall list element
-            monthList.classList.add("month-list");
-
-            let dropButton = document.createElement('button');  // dropdown button
-            monthList.appendChild(dropButton);
-            dropButton.outerHTML = "<button class='dropdown-button' type='button'><svg xmlns='http://www.w3.org/2000/svg' height='100%' viewBox='0 0 24 24' width='100%' fill='#000000'>"
+      const dropButton = document.createElement('button'); // dropdown button
+      monthList.appendChild(dropButton);
+      dropButton.outerHTML = "<button class='dropdown-button' type='button'><svg xmlns='http://www.w3.org/2000/svg' height='100%' viewBox='0 0 24 24' width='100%' fill='#000000'>"
                                     + "<path d='M0 0h24v24H0V0z' fill='none'/><path d='M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 "
                                     + "0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z'/></svg></button>";
 
-            let monthText = document.createElement('a');    // month text/link
-            monthText.innerHTML = months[i];
-            monthList.appendChild(monthText);
+      const monthText = document.createElement('a'); // month text/link
+      monthText.innerHTML = months[i];
+      monthList.appendChild(monthText);
 
-            let dailyList = document.createElement('ul');   // daily log list dropdown
-            dailyList.classList.add("daily-list");
+      const dailyList = document.createElement('ul'); // daily log list dropdown
+      dailyList.classList.add('daily-list');
 
-            let monthlyLog = document.createElement('li');    // monthly log (top of the dropdown list per month)
-            dailyList.appendChild(monthlyLog);
-            monthlyLog.outerHTML = "<li class='monthly-log'><a>" + months[i] + " Monthly Log</a></li></ul>";
+      const monthlyLog = document.createElement('li'); // monthly log (top of the dropdown list per month)
+      dailyList.appendChild(monthlyLog);
+      monthlyLog.outerHTML = `<li class='monthly-log'><a>${months[i]} Monthly Log</a></li></ul>`;
 
-            let numDays = daysInMonth(i, year);
+      // eslint-disable-next-line no-use-before-define
+      const numDays = daysInMonth(i, year);
 
-            for (let j = 1; j <= numDays; j++) {    // iterate through all days in the month
-                let dailyLog = document.createElement('li');    // daily logs
-                dailyList.appendChild(dailyLog);
-                dailyLog.outerHTML = "<li class='daily-log'><a>" + (i+1) + "/" + j + "/" + year + "</a></li></ul>";    // month/day/year
-                if (i == month && j == day) {    // stop populating after hitting today
-                    break;
-                }
-            }
-            monthList.appendChild(dailyList);
-            menuList.appendChild(monthList);
-            
-            if (i == month) {   // current month = dropdown is active by default
-                monthList.classList.add("dropped");
-                dailyList.style.maxHeight = dailyList.scrollHeight + "px";
-            }
+      // eslint-disable-next-line no-plusplus
+      for (let j = 1; j <= numDays; j++) { // iterate through all days in the month
+        const dailyLog = document.createElement('li'); // daily logs
+        dailyList.appendChild(dailyLog);
+        dailyLog.outerHTML = `<li class='daily-log'><a>${i + 1}/${j}/${year}</a></li></ul>`; // month/day/year
+        if (i == month && j == day) { // stop populating after hitting today
+          break;
+        }
+      }
+      monthList.appendChild(dailyList);
+      menuList.appendChild(monthList);
 
-            /* HTML representation:
+      if (i == month) { // current month = dropdown is active by default
+        monthList.classList.add('dropped');
+        dailyList.style.maxHeight = `${dailyList.scrollHeight}px`;
+      }
+
+      /* HTML representation:
             <li class="month-list"><button class="dropdown-button" type="button"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 24 24" width="100%" fill="#000000">
-                <path d="M0 0h24v24H0V0z" fill="none"/><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 
+                <path d="M0 0h24v24H0V0z" fill="none"/><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41
                 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"/></svg></button>
                 <a>January</a>
                 <ul class="daily-list">
@@ -337,57 +362,56 @@ class MenuComponent extends HTMLElement {
                 </ul>
             </li>
             */
-        }
-
-        function daysInMonth(month, year) {
-            return new Date(year, month+1, 0).getDate();
-        }
-
-    }
-    
-    // managing/populating custom collections
-    get collections() { // get all the custom collection representations in an object
-        let customCollections = this.shadowRoot.querySelectorAll('.custom-log a');
-        let collectionsObj = {};
-        let collectionNum = 0;
-
-        customCollections.forEach((entry) => {
-            let entryObj = {
-                'title': entry.innerText,               // name/title of custom collection
-                'state': entry.getAttribute('state')    // state of collection to route to
-                // TODO: Work out routing states for custom collections to finalize object format
-            };
-            collectionsObj["collection-"+collectionNum] = entryObj;
-            collectionNum++;
-        });
-
-        return collectionsObj;
-    }
-        
-    set collections(entries) {  // create all custom collections and add to menu based on the given object 
-        let customCollections = this.shadowRoot.querySelectorAll('.custom-log a');
-        customCollections.forEach((entry) => {  // clear existing collection displays
-            entry.remove();
-        });
-        for (let key in entries) {
-            if (entries.hasOwnProperty(key) && entries[key].hasOwnProperty('title') && entries[key].hasOwnProperty('state')) {  // checks for valid entry objects
-                // add custom collection to the menu
-                let customLog = document.createElement('li');
-                customLog.classList.add("custom-log");
-
-                let customLogTitle = document.createElement('a');
-                customLogTitle.innerHTML = entries[key].title;
-                customLogTitle.setAttribute('state', entries[key].state);
-                
-                customLog.appendChild(customLogTitle);
-                this.shadowRoot.querySelector('.menu-contents').appendChild(customLog);
-            }
-        }
     }
 
-    /**
+    // eslint-disable-next-line no-shadow
+    function daysInMonth(month, year) {
+      return new Date(year, month + 1, 0).getDate();
+    }
+  }
+
+  // managing/populating custom collections
+  get collections() { // get all the custom collection representations in an object
+    const customCollections = this.shadowRoot.querySelectorAll('.custom-log a');
+    const collectionsObj = {};
+    let collectionNum = 0;
+
+    customCollections.forEach((entry) => {
+      const entryObj = {
+        title: entry.innerText, // name/title of custom collection
+        state: entry.getAttribute('state'), // state of collection to route to
+        // TODO: Work out routing states for custom collections to finalize object format
+      };
+      collectionsObj[`collection-${collectionNum}`] = entryObj;
+      collectionNum++;
+    });
+
+    return collectionsObj;
+  }
+
+  set collections(entries) { // create all custom collections and add to menu based on the given object
+    const customCollections = this.shadowRoot.querySelectorAll('.custom-log a');
+    customCollections.forEach((entry) => { // clear existing collection displays
+      entry.remove();
+    });
+    // eslint-disable-next-line no-unused-vars
+    for (const key in entries) {
+      if (entries.hasOwnProperty(key) && entries[key].hasOwnProperty('title') && entries[key].hasOwnProperty('state')) { // checks for valid entry objects
+        // add custom collection to the menu
+        const customLog = document.createElement('li');
+        customLog.classList.add('custom-log');
+        const customLogTitle = document.createElement('a');
+        customLogTitle.innerHTML = entries[key].title;
+        customLogTitle.setAttribute('state', entries[key].state);
+        customLog.appendChild(customLogTitle);
+        this.shadowRoot.querySelector('.menu-contents').appendChild(customLog);
+      }
+    }
+  }
+
+  /**
      * JSON Format for custom collections:
-     * 
+     *
      * {
      *      'collection-0': {
      *          title: 'CSE 110',
@@ -401,18 +425,18 @@ class MenuComponent extends HTMLElement {
      * }
      */
 
-    /** 
+  /**
      * Add/delete custom collections:
-     * 
+     *
      *  let menu = document.querySelector('menu-component');
      *  menu.collections = { 'collection-0': { title: 'CSE 1', state: 'CSE 1' } };  // set initial collections
      *  let tempCollections = menu.collections;
-     * 
+     *
      *  delete tempCollections['collection-0'];
      *  menu.collections = tempCollections;   // deletes the CSE 1 collection from the menu
-     * 
+     *
      *  menu.collections = { 'collection-3': { title: 'CSE 110', state: 'CSE 110' } };
-     * 
+     *
      *  tempCollections = menu.collections;   // reformats and reorders the collection keys in the object
      *  newCollections['collection-1'] = { title: 'Tutoring', state: 'Tutoring' };
      *  menu.collections = newCollections;    // adds the new Tutoring collection to the menu

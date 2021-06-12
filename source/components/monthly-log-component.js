@@ -132,35 +132,31 @@ class MonthlyLogComponent extends HTMLElement {
                   alt="please enter a valid path">
             </section>
             <section class="monthly-log-form-section">
-              <ul class="monthly-log-bullets">
-                <li>2: laundry</li>
-                <li>14: grocery shopping</li>
-              </ul>
-              <button class="add-bullet-button">+ add</button>
+              <entry-list></entry-list>
             </section>
           </section>
           `;
 
-        this.attachShadow({ mode: 'open' })
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
 
-        // Get attributes
-        const title = this.getAttribute('title');
-        const month = this.getAttribute('month');
+    // Get attributes
+    const title = this.getAttribute('title');
+    const month = this.getAttribute('month');
 
-        // Apply css classes based on value of attributes
-        if (title) {
-            this.shadowRoot.querySelector('.monthly-log-title-text').innerText = title;
-        } else {
-            this.shadowRoot.querySelector('.monthly-log-title-text').innerText = "Viv's January";
-        }
-
-        if (month) {
-            this.shadowRoot.querySelector('.monthly-log-calendar-month-text').innerText = month;
-        } else {
-            this.shadowRoot.querySelector('.monthly-log-calendar-month-text').innerText = "JAN";
-        }
+    // Apply css classes based on value of attributes
+    if (title) {
+      this.shadowRoot.querySelector('.monthly-log-title-text').innerText = title;
+    } else {
+      this.shadowRoot.querySelector('.monthly-log-title-text').innerText = "Viv's January";
     }
+
+    if (month) {
+      this.shadowRoot.querySelector('.monthly-log-calendar-month-text').innerText = month;
+    } else {
+      this.shadowRoot.querySelector('.monthly-log-calendar-month-text').innerText = 'JAN';
+    }
+  }
 }
 
 customElements.define('monthly-log-component', MonthlyLogComponent);

@@ -1,3 +1,6 @@
+/* eslint-disable default-case */
+/* eslint-disable no-duplicate-case */
+/* eslint-disable no-shadow */
 /* eslint-disable no-undef */
 /* eslint-disable no-console */
 /* eslint-disable no-use-before-define */
@@ -16,28 +19,34 @@ const main = document.querySelector('main');
  * @param {number} entryNum if state is 'entry', then entryNum is the num
  */
 router.setState = (state, statePopped) => {
-  switch (state) {
-    case 'features':
-      homePage(false); // homePage(false) needs to come first since it recursively deletes any elements in <main>
-      featuresPage(true); // then featuresPage can be added to <main>
+    console.log(state);
+  const strState = state.split(';');
+  console.log(strState);
+
+
+  switch (strState[0]) {
+    case 'daily-log':
+        console.log('ONE');
+      dailyLog(strState[1]);
       break;
-    case 'download':
-      homePage(false); // clear out <main>
-      downloadPage(true);
+    case 'monthly-log':
+        console.log('TWO');
+      monthlyLog();
       break;
-    default:
-      homePage(true);
+    case 'future-log':
+        console.log('THREE');
+      futureLog();
+      break;
   }
 
   // Two states pushed to history consecutively can't be the same otherwise clicking the back and forward
   // buttons to the browser appear appear to not do anything
   if (!statePopped && window.location.hash != `#${state}`) {
-    console.log(`${state} pushed to history`);
-    console.log(`statePopped: ${statePopped}`);
-    console.log(`window.location.hash: ${window.location.hash}`);
-    console.log(`#${state}`);
-    console.log(`!statePopped: ${!statePopped}`);
-
+    // console.log(`${state} pushed to history`);
+    // console.log(`statePopped: ${statePopped}`);
+    // console.log(`window.location.hash: ${window.location.hash}`);
+    // console.log(`#${state}`);
+    // console.log(`!statePopped: ${!statePopped}`);
     // Don't push the home page to history multiple times.
     // An empty state indicates is for the home page
     if (state === '' && window.location.hash === '') {
@@ -50,43 +59,42 @@ router.setState = (state, statePopped) => {
 /**
  * @param {boolean} goTo true if you are going to this page, false if unsetting the page
  */
-function homePage(goTo) {
+function dailyLog(date) {
   // Remove all children of <main>
+  console.log('DAILY LOG CALLED');
   while (main.firstChild) {
     main.removeChild(main.firstChild);
   }
 
   // If visiting the home page, add the home component
-  if (goTo) {
-    // TODO replace createElement('p') with home page component
-    const homePage = document.createElement('landing-page');
-    main.appendChild(homePage);
+  if (date) {
+    console.log(`HERES THE DATE: ${date}`);
+    const dailyLog = document.createElement('daily-log-component');
+    // dailyLog.setAttribute('date', date);
+    dailyLog.date = date;
+    console.log(dailyLog);
+    main.appendChild(dailyLog);
   }
 }
 
-/**
- * @param {boolean} goTo true if you are going to this page, false if unsetting the page
- */
-function featuresPage(goTo) {
-  if (goTo) {
-    const featurePage = document.createElement('feature-page');
-    main.appendChild(featurePage);
-  } else if (main.firstChild) {
+function monthlyLog() {
+  console.log('DAILY LOG CALLED');
+  while (main.firstChild) {
     main.removeChild(main.firstChild);
   }
+
+  const monthlyLog = document.createElement('monthly-log-component');
+  main.appendChild(monthlyLog);
 }
 
-/**
- *
- * @param {boolean} goTo  true if you are going to this page, false if unsetting the page
- */
-function downloadPage(goTo) {
-  if (goTo) {
-    const downloadPage = document.createElement('download-page');
-    main.appendChild(downloadPage);
-  } else if (main.firstChild) {
+function futureLog() {
+  console.log('FUTURE LOG CALLED');
+  while (main.firstChild) {
     main.removeChild(main.firstChild);
   }
+
+  const futureLog = document.createElement('future-overview-page');
+  main.appendChild(futureLog);
 }
 
 /**
@@ -96,11 +104,6 @@ function downloadPage(goTo) {
 export function pushToHistory(state) {
   switch (state) {
     case 'features':
-      history.pushState({ page: 'features' }, '', './#features');
-      break;
-    case 'download':
-      history.pushState({ page: 'download' }, '', './#download');
-      break;
     default:
       history.pushState({}, '', './');
   }

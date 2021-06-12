@@ -1,12 +1,14 @@
+/* eslint-disable no-undef */
+// eslint-disable-next-line import/extensions
 import { router } from '../scripts/router.js';
 
 class RowFeaturesComponent extends HTMLElement {
-    constructor() {
-      super();
-  
-      const template = document.createElement('template');
-  
-      template.innerHTML = `
+  constructor() {
+    super();
+
+    const template = document.createElement('template');
+
+    template.innerHTML = `
           <style>
             section {
                 display: flex;
@@ -114,15 +116,15 @@ class RowFeaturesComponent extends HTMLElement {
             </div>
           </section>
           `;
-      this.attachShadow({ mode: 'open' });
-      this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
 
-      // Go to Features page from button on the Features page
-      const featuresPageButton = this.shadowRoot.querySelector('button');
-      featuresPageButton.addEventListener('click', () => {
-        window.scroll(0,0);
-        router.setState('features', false);
-      });
-    }
+    // Go to Features page from button on the Features page
+    const featuresPageButton = this.shadowRoot.querySelector('button');
+    featuresPageButton.addEventListener('click', () => {
+      window.scroll(0, 0);
+      router.setState('features', false);
+    });
+  }
 }
 customElements.define('row-features-component', RowFeaturesComponent);

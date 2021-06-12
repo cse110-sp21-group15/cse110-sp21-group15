@@ -120,7 +120,6 @@ class FutureOverviewComponent extends HTMLElement {
                     <li> 14: grocery shopping  </li>      
                     <li> 14: this is a very long entry but it should eventually start a new line weeee!  </li>        
                 </ul>
-                <button class="add-button"> + add </button>
             </section>
         </section>
 
