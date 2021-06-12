@@ -391,7 +391,7 @@ class MenuComponent extends HTMLElement {
      * {
      *      'collection-0': {
      *          title: 'CSE 110',
-     *          state: 'CSE 110'     // or whatever string is passed to router.setState route to the CSE 110 collection in the SPA
+     *          state: 'CSE-110'     // or whatever string is passed to router.setState route to the CSE 110 collection in the SPA
      *      },
      *      'collection-1': {
      *          title: 'Tutoring',
