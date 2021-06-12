@@ -13,9 +13,7 @@ JRNL, at its core, is a lightweight, private, digital [bullet journaling](www.bu
 ### Who is it for?
 
 Remote college students with extra curriculars
-
-*Add user story screenshots*
-
+![image](https://user-images.githubusercontent.com/44106252/121780201-226a1100-cb54-11eb-87ff-f83a998935c8.png)
 ### Why use JRNL? The pillars of our design philosophy
 
 We’ve thoughtfully adapted the physical Bullet Journal and its related principles to a digital medium. These are the pillars of our group's design philosophy:
